@@ -1,2 +1,2 @@
-# Loot-Box-Simulator
+
 WIP
