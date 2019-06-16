@@ -30,10 +30,16 @@ public class ClientInterface {
 		Scanner input = new Scanner(System.in);
 		while (mainloop) {
 			selection = HelperMethods.makeSelection();
+			if (selection.equals("3")) { // QUIT METHOD
+				System.out.println("Quitting program...");
+				// insert total winnings method here
+				System.exit(0);
+			}
+			System.out.println("Your credit balance is " + credits);
 			if (selection.equals("1")) { // CSGO Weapons Case
 				System.out.println("CSGO Weapons Case cost 50 credits. How many would you like to buy?");
 				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 50, numofboxes, credits);
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 50, numofboxes, credits, "CsgoWeaponsCase");
 				if (proceed == true) {
 					credits -= 50 * numofboxes;
 				} else if (proceed == false) {
@@ -42,15 +48,12 @@ public class ClientInterface {
 			} else if (selection.equals("2")) { // CSGO Weapons Case 2
 				System.out.println("CSGO Weapons Case 2 cost 50 credits. How many would you like to buy?");
 				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, numofboxes, credits);
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, numofboxes, credits, "CsgoWeaponsCase2");
 				if (proceed == true) {
 					credits -= 50 * numofboxes;
 				} else if (proceed == false) {
 					continue;
 				}
-			} else if (selection.equals("3")) {
-				System.out.println("Quitting program...");
-				System.exit(0);
 			}
 		}
 	}
