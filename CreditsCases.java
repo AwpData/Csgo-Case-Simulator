@@ -1,12 +1,11 @@
 
-public class CreditsCase extends DefaultCase {
-	private int creditswin;
+public class CreditsCases extends ReferenceCase {
+	private static int creditswin;
 
-	public CreditsCase() {
+	public CreditsCases() {
 		super();
 	}
-	
-	
+
 	// FOR SMALL CREDITS CASE (Costs 20 Credits)
 	// 10 credits = 1-28%
 	// 20 credits = 29-51%
@@ -15,7 +14,7 @@ public class CreditsCase extends DefaultCase {
 	// 50 credits = 88-99%
 	// 100 credits = 100%
 
-	public void spinCreditsCase() {
+	public void spinSmallCreditsCase() {
 		int percent = (int) ((int) 100 * Math.random() + 1);
 		if (percent >= 1 && percent <= 28) {
 			System.out.print("10 credits");
@@ -37,20 +36,24 @@ public class CreditsCase extends DefaultCase {
 			System.out.print("50 credits");
 			this.pink++;
 			creditswin += 50;
-		} else if (percent == 100) {
+		} else if (percent > 99 && percent <= 101) {
 			System.out.print("100 credits");
 			this.red++;
 			creditswin += 100;
 		}
 	}
 
-	public void getWinnings() {
-		System.out.println("Winnings today: " + creditswin + " credits");
+	public void getSessionWinnings() {
+		System.out.println("Winnings this session: " + creditswin + " credits");
 		System.out.println("10 credits box: " + getWhite());
 		System.out.println("20 credits box: " + getLightBlue());
 		System.out.println("30 credits box: " + getBlue());
 		System.out.println("40 credits box: " + getPurple());
 		System.out.println("50 credits box: " + getPink());
 		System.out.println("100 credits box: " + getRed());
+	}
+
+	protected static int getCreditsWin() {
+		return creditswin;
 	}
 }
