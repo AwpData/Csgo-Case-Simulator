@@ -1,4 +1,9 @@
+import java.lang.reflect.*;
 import java.util.*;
+// cost of credits lootbox = 20 credits
+// **** all lootboxes cost 20 credits for now
+// small credits case = spinSmallCreditsCase()
+// To spin the case, just put the name of it with () after
 
 // white = consumer grade
 // light blue = industrial grade
@@ -9,49 +14,44 @@ import java.util.*;
 
 // CASES IMPLEMENTED
 // Csgo Weapons Case
-//
-// Small Credits Case
+// Csgo Weapons Case 2
+// Small Credits Case (Not in program yet)
 
 // PACKAGES IMPLEMENTED
 
 // SOUVENIRS IMPLEMENTED
 
 public class ClientInterface {
-	public static void main(String[] args) {
-		int numofboxes = 0, spendingtotal;
-		int creditboxcost = 20;
-		int credits = 100000; // change this to any value
-		boolean buy = false;
+	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		String selection = "";
+		int numofboxes = 0;
+		int credits = 500; // change this to any value
+		boolean proceed = false, mainloop = true;
 		Scanner input = new Scanner(System.in);
-		while (!buy) {
-			System.out.println("How many loot boxes would you like to open?");
-			numofboxes = input.nextInt();
-			input.nextLine();
-			spendingtotal = numofboxes * creditboxcost;
-			if (spendingtotal > credits) {
-				System.out.println("Insufficient funds you need " + spendingtotal + " credits more. Try again");
-			} else if (credits == 0) {
-				System.out.println("You are broke");
-			} else {
-				credits -= spendingtotal;
-				System.out.println("Buying " + numofboxes + " boxes");
-				System.out.println("Your credit balance is now: " + credits + " credits");
-				buy = true;
+		while (mainloop) {
+			selection = HelperMethods.makeSelection();
+			if (selection.equals("1")) { // CSGO Weapons Case
+				System.out.println("CSGO Weapons Case cost 50 credits. How many would you like to buy?");
+				numofboxes = input.nextInt();
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 50, numofboxes, credits);
+				if (proceed == true) {
+					credits -= 50 * numofboxes;
+				} else if (proceed == false) {
+					continue;
+				}
+			} else if (selection.equals("2")) { // CSGO Weapons Case 2
+				System.out.println("CSGO Weapons Case 2 cost 50 credits. How many would you like to buy?");
+				numofboxes = input.nextInt();
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, numofboxes, credits);
+				if (proceed == true) {
+					credits -= 50 * numofboxes;
+				} else if (proceed == false) {
+					continue;
+				}
+			} else if (selection.equals("3")) {
+				System.out.println("Quitting program...");
+				System.exit(0);
 			}
 		}
-		// cost of credits lootbox = 20 credits
-		CreditsCase creditslootbox = new CreditsCase();
-		CsgoCases csgocase = new CsgoCases();
-		// credits case = spinCreditsCase()
-		// To spin the case, just put the name of it with () after
-		for (int i = 1; i <= numofboxes; i++) {
-			System.out.println("\nPress enter to open a box! " + (numofboxes - i + 1) + " boxes remaining");
-			input.nextLine();
-			System.out.print("Lootbox " + i + " contains: ");
-			csgocase.CsgoWeaponsCase();
-			System.out.println();
-		}
-		System.out.println();
-		csgocase.getWinnings();
 	}
 }
