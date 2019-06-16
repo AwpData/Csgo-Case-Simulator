@@ -12,7 +12,7 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		return input.nextLine();
 	}
 
-	public static boolean buyCheck(String boxname, int cost, int numofboxes, int credits) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public static boolean buyCheck(String boxname, int cost, int numofboxes, int credits, String casename) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		boolean buy = false;
 		while (!buy) {
 			int spendingtotal = numofboxes * cost;
@@ -20,16 +20,17 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 				System.out.println("You are broke\nGame over...");
 				System.exit(0);
 			} else if (cost > credits) {
-				System.out.println("You can't afford this case choose a different one.");
+				System.out.println("You can't afford this one choose a different one.");
 				return false;
 			} else if (spendingtotal > credits) {
 				System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more. Try again");
 				numofboxes = input.nextInt();
 			} else {
+				System.out.println("Buying " + numofboxes + " boxes...");
+				System.out.println("Transaction successful: " + credits + " - " + spendingtotal);
 				credits -= spendingtotal;
-				System.out.println("Buying " + numofboxes + " boxes");
 				System.out.println("Your credit balance is now: " + credits + " credits");
-				HelperMethods.spin(numofboxes, "CsgoWeaponsCase2", "case");
+				HelperMethods.spin(numofboxes, casename, "case");
 				return true;
 			}
 		}
