@@ -25,8 +25,8 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 				System.out.println("You can't afford this one choose a different one.");
 				return false;
 			} else if (spendingtotal > credits) {
-				System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more. Try again");
-				numofboxes = input.nextInt();
+				System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more.");
+				return false;
 			} else {
 				System.out.println("Buying " + numofboxes + " boxes...");
 				System.out.println("Transaction successful: " + credits + " - " + spendingtotal);
