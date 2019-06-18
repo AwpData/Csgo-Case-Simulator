@@ -13,6 +13,7 @@ import java.io.*;
 // CASES IMPLEMENTED
 // Csgo Weapons Case
 // Csgo Weapons Case 2
+// Csgo Weapons Case 3
 // Small Credits Case 
 
 // PACKAGES IMPLEMENTED
@@ -35,7 +36,7 @@ public class ClientInterface {
 			selection = HelperMethods.makeSelection();
 
 			// ----------- Miscellaneous Options ----
-			if (selection.equals("4")) { // Quit program
+			if (selection.equals("5")) { // Quit program
 				ReferenceCase.getTotalWinnings();
 				System.out.println("\nQuitting program...");
 				System.exit(0);
@@ -60,7 +61,16 @@ public class ClientInterface {
 				} else if (proceed == false) {
 					continue;
 				}
-			} else if (selection.equals("3")) { // Small Credits Case
+			} else if (selection.equals("3")) { // CSGO Weapons Case 3
+				System.out.println("CSGO Weapons Case 3 cost 50 credits. How many would you like to buy?");
+				numofboxes = input.nextInt();
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 3", 50, numofboxes, credits, "CsgoWeaponsCase3", "case");
+				if (proceed == true) {
+					credits -= 50 * numofboxes;
+				} else if (proceed == false) {
+					continue;
+				}
+			} else if (selection.equals("4")) { // Small Credits Case
 				System.out.println("Small credits case cost 20 credits. How many would you like to buy?");
 				numofboxes = input.nextInt();
 				proceed = HelperMethods.buyCheck("Small Credits Case", 20, numofboxes, credits, "SmallCreditsCase", "case");
