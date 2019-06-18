@@ -26,19 +26,22 @@ public class ClientInterface {
 		int credits = 500; // change this to any value
 		boolean proceed = false, mainloop = true;
 		Scanner input = new Scanner(System.in);
-		PrintStream output = new PrintStream(new File("src/inventory.txt"));
 		while (mainloop) {
+			PrintStream output = new PrintStream(new File("src/inventory.txt"));
 			for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
 				output.println(ItemStatistics.getItemList().get(i));
 			}
+			System.out.println("Your credit balance is " + credits);
 			selection = HelperMethods.makeSelection();
+
+			// ----------- Miscellaneous Options ----
 			if (selection.equals("4")) { // Quit program
 				ReferenceCase.getTotalWinnings();
 				System.out.println("\nQuitting program...");
 				System.exit(0);
 			}
-			System.out.println("Your credit balance is " + credits);
 
+			// ----------- Cases below --------------
 			if (selection.equals("1")) { // CSGO Weapons Case
 				System.out.println("CSGO Weapons Case cost 50 credits. How many would you like to buy?");
 				numofboxes = input.nextInt();
