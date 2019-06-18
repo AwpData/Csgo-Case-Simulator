@@ -1,8 +1,10 @@
+import java.util.*;
 
-public class ItemStatistics {
+public class ItemStatistics extends ClientInterface {
 	private String rarity, itemname, wear;
 	private double itemfloat;
-	private static int stattrak;
+	static private int stattrak;
+	static private ArrayList<String> items = new ArrayList<>();
 
 	public ItemStatistics(String itemname, String rarity) {
 		this.itemname = itemname;
@@ -58,27 +60,32 @@ public class ItemStatistics {
 		printItemDescription(itemname, wear, rarity, itemfloat);
 	}
 
-	private void printItemDescription(String itemname, String wear, String rarity) { // 4th step
-		System.out.print(itemname + " " + wear + " " + rarity);
-	}
-
 	private void printItemDescription(String itemname, String wear, String rarity, double itemfloat) { // 4bth step
+		items.add(itemname + " " + wear + " " + rarity);
 		System.out.print(itemname + " " + wear + " " + rarity + ", Float: " + itemfloat);
 	}
 
-	protected String getWear() {
+	public static ArrayList<String> getItemList() {
+		return items;
+	}
+
+	public String getWear() {
 		return wear;
 	}
 
-	protected double getItemFloat() {
+	public String getRarity() {
+		return rarity;
+	}
+
+	public double getItemFloat() {
 		return itemfloat;
 	}
 
-	protected String getItemName() {
+	public String getItemName() {
 		return itemname;
 	}
 
-	protected static int getStattrak() {
+	public static int getStattrak() {
 		return stattrak;
 	}
 }
