@@ -1,6 +1,5 @@
-
 public class CreditsCases extends ReferenceCase {
-	private static int creditswin;
+	protected static int creditswin, credit;
 
 	public CreditsCases() {
 		super();
@@ -14,33 +13,35 @@ public class CreditsCases extends ReferenceCase {
 	// 50 credits = 88-99%
 	// 100 credits = 100%
 
-	public void spinSmallCreditsCase() {
+	public void SmallCreditsCase() {
 		int percent = (int) ((int) 100 * Math.random() + 1);
 		if (percent >= 1 && percent <= 28) {
 			System.out.print("10 credits");
 			this.white++;
-			creditswin += 10;
+			credit = 10;
 		} else if (percent >= 29 && percent <= 51) {
 			System.out.print("20 credits");
 			this.lightblue++;
-			creditswin += 20;
+			credit = 20;
 		} else if (percent >= 52 && percent <= 72) {
 			System.out.print("30 credits");
 			this.blue++;
-			creditswin += 30;
+			credit = 30;
 		} else if (percent >= 73 && percent <= 87) {
 			System.out.print("40 credits");
 			this.purple++;
-			creditswin += 40;
+			credit = 40;
 		} else if (percent >= 88 && percent <= 99) {
 			System.out.print("50 credits");
 			this.pink++;
-			creditswin += 50;
+			credit = 50;
 		} else if (percent > 99 && percent <= 101) {
 			System.out.print("100 credits");
 			this.red++;
-			creditswin += 100;
+			credit = 100;
 		}
+		creditswin += credit;
+		ReferenceCase.totalcreditswon += credit;
 	}
 
 	public void getSessionWinnings() {
