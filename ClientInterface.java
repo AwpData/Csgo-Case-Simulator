@@ -79,6 +79,7 @@ public class ClientInterface {
 					credits += CreditsCases.getCreditsWin();
 					CreditsCases.creditswin = 0;
 				} else if (proceed == false) {
+					CreditsCases.creditswin = 0;
 					continue;
 				}
 			}
