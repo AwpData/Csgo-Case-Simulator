@@ -135,4 +135,68 @@ public class CsgoCases extends ReferenceCase {
 		}
 		new ItemStatistics(itemname, rarity);
 	}
+
+	public void CsgoWeaponsCase3() {
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.0) {
+				itemname = "Dual Berettas | Panther";
+				this.blue++;
+			} else if (percent > 20.0 && percent <= 40.0) {
+				itemname = "P2000 | Red FragCam";
+				this.blue++;
+			} else if (percent > 40.0 && percent <= 60.0) {
+				itemname = "Glock-18 | Blue Fissure";
+				this.blue++;
+			} else if (percent > 60.0 && percent <= 80.0) {
+				itemname = "C275-Auto | Crimson Web";
+				this.blue++;
+			} else if (percent > 80.0 && percent <= 101) {
+				itemname = "USP-S | Stainless";
+				this.blue++;
+			}
+			ReferenceCase.totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.0) {
+				itemname = "C275-Auto | Tread Plate";
+				this.purple++;
+			} else if (percent > 25.0 && percent <= 50.0) {
+				itemname = "Tec-9 | Titanium Bit";
+				this.purple++;
+			} else if (percent > 50.0 && percent <= 75.0) {
+				itemname = "Five-SeveN | Copper Galaxy";
+				this.purple++;
+			} else if (percent > 75.0 && percent <= 101) {
+				itemname = "Desert Eagle | Heirloom";
+				this.purple++;
+			}
+			ReferenceCase.totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.0) {
+				itemname = "C275-Auto | The Fuschia Is Now";
+				this.pink++;
+			} else if (percent > 50.0 && percent <= 101) {
+				itemname = "P250 | Undertow";
+				this.pink++;
+			}
+			ReferenceCase.totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			itemname = "C275-Auto | Victoria";
+			this.red++;
+			ReferenceCase.totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			itemname = "Knife | None";
+			this.gold++;
+			ReferenceCase.totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity);
+	}
 }
