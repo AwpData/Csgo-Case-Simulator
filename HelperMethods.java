@@ -8,8 +8,9 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("Which case would you like to buy? (Enter number) \n");
 		System.out.println("1. CSGO Weapons Case");
 		System.out.println("2. CSGO Weapons Case 2");
-		System.out.println("3. Small Credits Case");
-		System.out.println("4. Quit program\n");
+		System.out.println("3. CSGO Weapons Case 3");
+		System.out.println("4. Small Credits Case");
+		System.out.println("5. Quit program\n");
 		return input.nextLine();
 	}
 
