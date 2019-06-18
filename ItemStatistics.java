@@ -9,7 +9,7 @@ public class ItemStatistics extends ClientInterface {
 	public ItemStatistics(String itemname, String rarity) {
 		this.itemname = itemname;
 		this.rarity = rarity;
-		statTrak(itemname);
+		this.statTrak(itemname);
 	}
 
 	// 10% chance of getting stattrak
@@ -22,7 +22,7 @@ public class ItemStatistics extends ClientInterface {
 	private void statTrak(String itemname) { // 1st step
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 62.0 && percent <= 72.0) {
-			itemname = "StatTrak™ " + itemname;
+			this.itemname = "StatTrak™ " + itemname;
 			stattrak++;
 		}
 		wear(itemname);
