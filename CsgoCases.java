@@ -5,7 +5,7 @@ public class CsgoCases extends ReferenceCase {
 	public CsgoCases() {
 		super();
 	}
-	
+
 	public void getSessionWinnings() {
 		System.out.println("Winnings this session: "); // Set # of new skins and # of duplicate skins found (based in text file) later
 		System.out.println("Blue (Mil-Spec): " + getBlue());
@@ -31,6 +31,7 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "SG 553 | Ultraviolet";
 				this.blue++;
 			}
+			ReferenceCase.totalblue++;
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
@@ -44,6 +45,7 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "Glock-18 | Dragon Tattoo";
 				this.purple++;
 			}
+			ReferenceCase.totalpurple++;
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
@@ -54,17 +56,20 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "AK-47 | Case Hardened";
 				this.pink++;
 			}
+			ReferenceCase.totalpink++;
 			rarity = "Pink";
 		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
 			itemname = "AWP | Lightning Strike";
 			this.red++;
+			ReferenceCase.totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
 			itemname = "Knife | None";
 			this.gold++;
+			ReferenceCase.totalgold++;
 			rarity = "Gold";
 		}
-		new ItemStatistics(itemname, rarity); // Passes to itemstatistics for stattrak, wear, (float?)
+		new ItemStatistics(itemname, rarity);
 	}
 
 	public void CsgoWeaponsCase2() {
@@ -87,6 +92,7 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "M4A1-S | Blood Tiger";
 				this.blue++;
 			}
+			ReferenceCase.totalblue++;
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
@@ -103,6 +109,7 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "MP9 | Hypnotic";
 				this.purple++;
 			}
+			ReferenceCase.totalpurple++;
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
@@ -113,14 +120,17 @@ public class CsgoCases extends ReferenceCase {
 				itemname = "P90 | Cold Blooded";
 				this.pink++;
 			}
+			ReferenceCase.totalpink++;
 			rarity = "Pink";
 		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
 			itemname = "SSG 08 | Blood In The Water";
 			this.red++;
+			ReferenceCase.totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
 			itemname = "Knife | None";
 			this.gold++;
+			ReferenceCase.totalgold++;
 			rarity = "Gold";
 		}
 		new ItemStatistics(itemname, rarity);
