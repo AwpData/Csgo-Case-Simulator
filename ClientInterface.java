@@ -23,7 +23,7 @@ import java.io.*;
 // SOUVENIRS IMPLEMENTED
 
 public class ClientInterface {
-	static int credits = 10; // change this to any value
+	static int credits = 1000; // change this to any value
 
 	public static void main(String[] args) throws FileNotFoundException {
 		String selection = "";
