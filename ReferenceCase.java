@@ -51,37 +51,4 @@ public class ReferenceCase {
 	public int getGold() {
 		return gold;
 	}
-
-	private void spin() { // Example Only
-		int percent = (int) ((int) 100 * Math.random() + 1);
-		if (percent >= 0 && percent <= 40) {
-			System.out.print("White aquired");
-			ReferenceCase.totalwhite++;
-			this.white++;
-		} else if (percent > 40 && percent <= 60) {
-			System.out.print("Lightblue acquired");
-			ReferenceCase.totallightblue++;
-			this.lightblue++;
-		} else if (percent > 60 && percent <= 80) {
-			System.out.print("Blue acquired");
-			ReferenceCase.totalblue++;
-			this.blue++;
-		} else if (percent > 80 && percent <= 90) {
-			System.out.print("Purple acquired");
-			ReferenceCase.totalpurple++;
-			this.purple++;
-		} else if (percent > 90 && percent <= 96) {
-			System.out.print("Pink acquired");
-			ReferenceCase.totalpink++;
-			this.pink++;
-		} else if (percent > 96 && percent <= 99) {
-			System.out.print("Red acquired");
-			ReferenceCase.totalred++;
-			this.red++;
-		} else if (percent > 99 && percent <= 101) {
-			System.out.print("Gold acquired");
-			ReferenceCase.totalgold++;
-			this.gold++;
-		}
-	}
 }
