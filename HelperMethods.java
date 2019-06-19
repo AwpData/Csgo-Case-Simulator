@@ -34,51 +34,36 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 			System.out.println("Transaction successful: " + credits + " - " + spendingtotal);
 			credits -= spendingtotal;
 			System.out.println("Your credit balance is now: " + credits + " credits");
-			HelperMethods.spin(numofboxes, casename, type);
+			preSpin(numofboxes, casename, type);
 			return true;
 		}
 		return false;
 	}
 
-	public static void spin(int numofboxes, String casename, String boxtype) {
+	public static void preSpin(int numofboxes, String casename, String boxtype) {
 		if (casename.contains("Credits")) { // Credits cases type spins
 			CreditsCases creditscase = new CreditsCases();
-			for (int i = 1; i <= numofboxes; i++) {
-				System.out.println("\nPress enter to open a " + boxtype + ": " + (numofboxes - i + 1) + " " + boxtype + "s remaining");
-				input.nextLine();
-				System.out.print(boxtype + " " + i + " contains: ");
-				try {
-					Method method = creditscase.getClass().getMethod(casename);
-					method.invoke(creditscase);
-				} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					System.out.println("ProgramError: How did this happen?");
-				}
-				System.out.println();
-			}
-			System.out.println("\nPress enter to see your winnings this session!\n");
-			input.nextLine();
+			spin(creditscase, casename, numofboxes, boxtype);
 			creditscase.getSessionWinnings();
-			System.out.println("\nPress enter to go back to the main menu");
-			input.nextLine();
-		} else { // Case type spins
+		} else { // If (case type is Csgo skin case)
 			CsgoCases csgocase = new CsgoCases();
-			for (int i = 1; i <= numofboxes; i++) {
-				System.out.println("\nPress enter to open a " + boxtype + ": " + (numofboxes - i + 1) + " " + boxtype + "s remaining");
-				input.nextLine();
-				System.out.print(boxtype + " " + i + " contains: ");
-				try {
-					Method method = csgocase.getClass().getMethod(casename);
-					method.invoke(csgocase);
-				} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					System.out.println("ProgramError: How did this happen?");
-				}
-				System.out.println();
-			}
-			System.out.println("\nPress enter to see your winnings this session!");
-			input.nextLine();
+			spin(csgocase, casename, numofboxes, boxtype);
 			csgocase.getSessionWinnings();
-			System.out.println("\nPress enter to go back to the main menu\n");
+		}
+	}
+
+	public static void spin(Object objectname, String casename, int numofboxes, String boxtype) {
+		for (int i = 1; i <= numofboxes; i++) {
+			System.out.println("\nPress enter to open a " + boxtype + ": " + (numofboxes - i + 1) + " " + boxtype + "s remaining");
 			input.nextLine();
+			System.out.print(boxtype + " " + i + " contains: ");
+			try {
+				Method method = objectname.getClass().getMethod(casename);
+				method.invoke(objectname);
+			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+				System.out.println("ProgramError: How did this happen?");
+			}
+			System.out.println();
 		}
 	}
 }
