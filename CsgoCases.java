@@ -6,6 +6,8 @@ public class CsgoCases extends ReferenceCase {
 	}
 
 	public void getSessionWinnings() {
+		System.out.println("\nPress enter to see your winnings this session!");
+		HelperMethods.input.nextLine();
 		System.out.println("Winnings this session: "); // Set # of new skins and # of duplicate skins found (based in text file) later
 		System.out.println("Blue (Mil-Spec): " + getBlue());
 		System.out.println("Purple (Restricted): " + getPurple());
@@ -13,6 +15,8 @@ public class CsgoCases extends ReferenceCase {
 		System.out.println("Red (Covert): " + getRed());
 		System.out.println("Gold (Exceedingly Rare): " + getGold());
 		System.out.println("Stattrak Weapons: " + ItemStatistics.getStattrak());
+		System.out.println("\nPress enter to go back to the main menu\n");
+		HelperMethods.input.nextLine();
 	}
 
 	// ALL CASES BELOW HERE -------------------
