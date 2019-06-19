@@ -1,19 +1,21 @@
-import java.util.*;
 import java.io.*;
-// cost of credits lootbox = 20 credits
-// To spin a case, just put the name of it with () after
 
-// white = consumer grade
-// light blue = industrial grade
-// blue = mil-spec 
-// purple = restricted
-// pink = classified
-// red = covert
+/* IMPORTANT IMPORTANT IMPORTANT
+ * 
+ * This program uses Unicode Characters! 
+ * If you use Eclipse, it is set to use the default "Cp1252" text file encoding and this program must be set to "UTF-8"!
+ * In order to not get errors or missing characters (labeled with "?"):
+ * 1. Window > Preferences > General > Content Types, under "Default encoding", type "UTF-8" and click apply
+ * 2. Window > Preferences > General > Workspace, set "Text file encoding" to "Other : UTF-8".
+ * 
+ * NOTE: Other classes have useful keys for the data if you are confused!
+ */
 
 // CASES IMPLEMENTED
 // Csgo Weapons Case
 // Csgo Weapons Case 2
 // Csgo Weapons Case 3
+// Chroma Case 
 // Small Credits Case 
 
 // PACKAGES IMPLEMENTED
@@ -21,12 +23,11 @@ import java.io.*;
 // SOUVENIRS IMPLEMENTED
 
 public class ClientInterface {
+	static int credits = 10; // change this to any value
+
 	public static void main(String[] args) throws FileNotFoundException {
 		String selection = "";
-		int numofboxes = 0;
-		int credits = 500; // change this to any value
 		boolean proceed = false, mainloop = true;
-		Scanner input = new Scanner(System.in);
 		while (mainloop) {
 			PrintStream output = new PrintStream(new File("src/inventory.txt"));
 			for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
@@ -36,7 +37,7 @@ public class ClientInterface {
 			selection = HelperMethods.makeSelection();
 
 			// ----------- Miscellaneous Options ----
-			if (selection.equals("5")) { // Quit program
+			if (selection.equalsIgnoreCase("quit")) { // Quit program
 				ReferenceCase.getTotalWinnings();
 				System.out.println("\nQuitting program...");
 				System.exit(0);
@@ -44,45 +45,21 @@ public class ClientInterface {
 
 			// ----------- Cases below --------------
 			if (selection.equals("1")) { // CSGO Weapons Case
-				System.out.println("CSGO Weapons Case cost 50 credits. How many would you like to buy?");
-				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 50, numofboxes, credits, "CsgoWeaponsCase", "case");
-				if (proceed == true) {
-					credits -= 50 * numofboxes;
-				} else if (proceed == false) {
-					continue;
-				}
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 50, "CsgoWeaponsCase", "case");
 			} else if (selection.equals("2")) { // CSGO Weapons Case 2
-				System.out.println("CSGO Weapons Case 2 cost 50 credits. How many would you like to buy?");
-				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, numofboxes, credits, "CsgoWeaponsCase2", "case");
-				if (proceed == true) {
-					credits -= 50 * numofboxes;
-				} else if (proceed == false) {
-					continue;
-				}
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, "CsgoWeaponsCase2", "case");
 			} else if (selection.equals("3")) { // CSGO Weapons Case 3
-				System.out.println("CSGO Weapons Case 3 cost 50 credits. How many would you like to buy?");
-				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case 3", 50, numofboxes, credits, "CsgoWeaponsCase3", "case");
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 3", 50, "CsgoWeaponsCase3", "case");
+			} else if (selection.equals("4")) { // Chroma Case
+				proceed = HelperMethods.buyCheck("Chroma Case", 30, "ChromaCase", "case");
+			} else if (selection.equals("5")) { // Small Credits Case
+				proceed = HelperMethods.buyCheck("Small Credits Case", 20, "SmallCreditsCase", "case");
 				if (proceed == true) {
-					credits -= 50 * numofboxes;
-				} else if (proceed == false) {
-					continue;
-				}
-			} else if (selection.equals("4")) { // Small Credits Case
-				System.out.println("Small credits case cost 20 credits. How many would you like to buy?");
-				numofboxes = input.nextInt();
-				proceed = HelperMethods.buyCheck("Small Credits Case", 20, numofboxes, credits, "SmallCreditsCase", "case");
-				if (proceed == true) {
-					credits -= (20 * numofboxes);
 					credits += CreditsCases.getCreditsWin();
-					CreditsCases.creditswin = 0;
-				} else if (proceed == false) {
-					CreditsCases.creditswin = 0;
-					continue;
 				}
 			}
+			CreditsCases.creditswin = 0;
+			ItemStatistics.stattrak = 0;
 		}
 	}
 }
