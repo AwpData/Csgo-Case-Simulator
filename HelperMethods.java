@@ -3,38 +3,39 @@ import java.util.*;
 
 public class HelperMethods extends ClientInterface { // For Client Interface Class
 	static Scanner input = new Scanner(System.in);
+	static private int numofboxes;
 
 	public static String makeSelection() {
 		System.out.println("Which case would you like to buy? (Enter number) \n");
 		System.out.println("1. CSGO Weapons Case");
 		System.out.println("2. CSGO Weapons Case 2");
 		System.out.println("3. CSGO Weapons Case 3");
-		System.out.println("4. Small Credits Case");
-		System.out.println("5. Quit program\n");
+		System.out.println("4. Chroma Case");
+		System.out.println("5. Small Credits Case");
+		System.out.println("\ntype \"quit\" to quit");
 		return input.nextLine();
 	}
 
-	public static boolean buyCheck(String boxname, int cost, int numofboxes, int credits, String casename, String type) {
-		boolean buy = false;
-		while (!buy) {
-			int spendingtotal = numofboxes * cost;
-			if (credits == 0 || credits < 0) {
-				System.out.println("You are broke\nGame over...");
-				System.exit(0);
-			} else if (cost > credits) {
-				System.out.println("You can't afford this one choose a different one.");
-				return false;
-			} else if (spendingtotal > credits) {
-				System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more.");
-				return false;
-			} else {
-				System.out.println("Buying " + numofboxes + " boxes...");
-				System.out.println("Transaction successful: " + credits + " - " + spendingtotal);
-				credits -= spendingtotal;
-				System.out.println("Your credit balance is now: " + credits + " credits");
-				HelperMethods.spin(numofboxes, casename, type);
-				return true;
-			}
+	public static boolean buyCheck(String boxname, int cost, String casename, String type) {
+		System.out.println(boxname + " cost " + cost + " credits. How many would you like to buy?");
+		numofboxes = input.nextInt();
+		int spendingtotal = numofboxes * cost;
+		if (credits == 0 || credits < 0) {
+			System.out.println("You are broke\nGame over...");
+			System.exit(0);
+		} else if (cost > credits) {
+			System.out.println("You can't afford this one choose a different one.\n");
+			return false;
+		} else if (spendingtotal > credits) {
+			System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more.\n");
+			return false;
+		} else {
+			System.out.println("Buying " + numofboxes + " boxes...");
+			System.out.println("Transaction successful: " + credits + " - " + spendingtotal);
+			credits -= spendingtotal;
+			System.out.println("Your credit balance is now: " + credits + " credits");
+			HelperMethods.spin(numofboxes, casename, type);
+			return true;
 		}
 		return false;
 	}
@@ -54,9 +55,11 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 				}
 				System.out.println();
 			}
-			System.out.println();
+			System.out.println("\nPress enter to see your winnings this session!\n");
+			input.nextLine();
 			creditscase.getSessionWinnings();
-			System.out.println();
+			System.out.println("\nPress enter to go back to the main menu");
+			input.nextLine();
 		} else { // Case type spins
 			CsgoCases csgocase = new CsgoCases();
 			for (int i = 1; i <= numofboxes; i++) {
@@ -67,13 +70,15 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 					Method method = csgocase.getClass().getMethod(casename);
 					method.invoke(csgocase);
 				} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					e.printStackTrace();
+					System.out.println("ProgramError: How did this happen?");
 				}
 				System.out.println();
 			}
-			System.out.println();
+			System.out.println("\nPress enter to see your winnings this session!");
+			input.nextLine();
 			csgocase.getSessionWinnings();
-			System.out.println();
+			System.out.println("\nPress enter to go back to the main menu\n");
+			input.nextLine();
 		}
 	}
 }
