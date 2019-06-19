@@ -3,7 +3,7 @@ import java.util.*;
 public class ItemStatistics extends ClientInterface {
 	private String rarity, itemname, wear;
 	private double itemfloat;
-	static private int stattrak;
+	static public int stattrak;
 	static private ArrayList<String> items = new ArrayList<>();
 
 	public ItemStatistics(String itemname, String rarity) {
@@ -12,18 +12,35 @@ public class ItemStatistics extends ClientInterface {
 		this.statTrak(itemname);
 	}
 
-	// 10% chance of getting stattrak
+	// FLOAT GUIDE:
 	// FN float: 0.00 - 0.07
 	// MW float: 0.07 - 0.15
 	// FT float: 0.15 - 0.37
 	// WW float: 0.37 - 0.44
 	// BS float: 0.44 - 1.0
 
+	// RARITY GUIDE:
+	// white = consumer grade
+	// light blue = industrial grade
+	// blue = mil-spec
+	// purple = restricted
+	// pink = classified
+	// red = covert
+
+	// 10% chance of getting stattrak
 	private void statTrak(String itemname) { // 1st step
 		double percent = 100 * Math.random() + 1;
-		if (percent >= 62.0 && percent <= 72.0) {
-			this.itemname = "StatTrak™ " + itemname;
+		if (percent >= 62.0 && percent <= 72.0) { // Is stattrak
+			if (rarity.equals("Gold")) { // If knife add star and then trademark symbol
+				this.itemname = "\u2605 StatTrak\u2122 " + itemname;
+			} else {
+				this.itemname = "StatTrak\u2122 " + itemname;
+			}
 			stattrak++;
+		} else {
+			if (rarity.equals("Gold")) { // If it is a knife add the star icon "★"
+				this.itemname = "\u2605 " + itemname;
+			}
 		}
 		wear(itemname);
 	}
@@ -39,7 +56,7 @@ public class ItemStatistics extends ClientInterface {
 			wear = "(Field-Tested)";
 		} else if (percent >= 60.0 && percent < 80.0) {
 			wear = "(Minimal-Wear)";
-		} else if (percent >= 80.0 && percent <= 100) {
+		} else if (percent >= 80.0 && percent <= 101) {
 			wear = "(Factory-New)";
 		}
 		itemfloat(wear);
@@ -61,8 +78,8 @@ public class ItemStatistics extends ClientInterface {
 	}
 
 	private void printItemDescription(String itemname, String wear, String rarity, double itemfloat) { // 4bth step
-		items.add(itemname + " " + wear + " " + rarity);
-		System.out.print(itemname + " " + wear + " " + rarity + ", Float: " + itemfloat);
+		items.add("[" + rarity.toUpperCase() + "]" + "\t" + itemname + " " + wear);
+		System.out.print("[" + rarity.toUpperCase() + "]" + " " + itemname + " " + wear + ", Float: " + itemfloat);
 	}
 
 	public static ArrayList<String> getItemList() {
