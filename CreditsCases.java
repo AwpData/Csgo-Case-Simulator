@@ -5,10 +5,13 @@ public class CreditsCases extends ReferenceCase {
 		super();
 	}
 
+	// PRICE GUIDE:
+	// Small credits lootbox = 20 credits
+
 	// FOR SMALL CREDITS CASE (Costs 20 Credits)
 	// 10 credits = 1-28%
 	// 20 credits = 29-51%
-	// 30 credits = 52-71%
+	// 30 credits = 52-71% //remove all these lines later
 	// 40 credits = 72-87%
 	// 50 credits = 88-99%
 	// 100 credits = 100%
@@ -41,7 +44,7 @@ public class CreditsCases extends ReferenceCase {
 			credit = 100;
 		}
 		creditswin += credit;
-		ReferenceCase.totalcreditswon += credit;
+		totalcreditswon += credit;
 	}
 
 	public void getSessionWinnings() {
