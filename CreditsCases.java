@@ -48,6 +48,8 @@ public class CreditsCases extends ReferenceCase {
 	}
 
 	public void getSessionWinnings() {
+		System.out.println("\nPress enter to see your winnings this session!\n");
+		HelperMethods.input.nextLine();
 		System.out.println("Winnings this session: " + creditswin + " credits");
 		System.out.println("10 credits box: " + getWhite());
 		System.out.println("20 credits box: " + getLightBlue());
@@ -55,6 +57,8 @@ public class CreditsCases extends ReferenceCase {
 		System.out.println("40 credits box: " + getPurple());
 		System.out.println("50 credits box: " + getPink());
 		System.out.println("100 credits box: " + getRed());
+		System.out.println("\nPress enter to go back to the main menu");
+		HelperMethods.input.nextLine();
 	}
 
 	protected static int getCreditsWin() {
