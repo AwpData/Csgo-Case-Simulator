@@ -82,6 +82,19 @@ public class ItemStatistics extends ClientInterface {
 		System.out.print("[" + rarity.toUpperCase() + "]" + " " + itemname + " " + wear + ", Float: " + itemfloat);
 	}
 
+	public static String sellSkin(int index) {
+		String item;
+		for (int i = 0; i < items.size(); i++) {
+			if (i == index - 1) {
+				item = items.get(i);
+				items.remove(i);
+				System.out.println("Successfully sold: " + item);
+				return item;
+			}
+		}
+		return "Skin not found!";
+	}
+
 	public static ArrayList<String> getItemList() {
 		return items;
 	}
