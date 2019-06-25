@@ -21,21 +21,26 @@ public class CsgoCases extends ReferenceCase {
 
 	// ALL CASES BELOW HERE -------------------
 	// PRICE GUIDE:
-	// Csgo weapons cases (1-3) = 50 credits
+	// Csgo weapons case = 100 credits
+	// Csgo weapons case 2 = 50 credits
+	// Csgo weapons case 3 = 30 credits
 	// Chroma case (1-3) = 30 credits
+	// eSports 2013 case = 50 credits
+	// eSports 2013 winter case = 30 credits
+	// eSports 2014 summer case = 40 credits
 
 	public void CsgoWeaponsCase() { // CSGO WEAPONS CASE
 		// #s: blue = 3, purple = 3, pink = 2, red = 1, gold = 1
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 33.33) {
+			if (percent >= 0 && percent <= 33.66) {
 				itemname = "MP7 | Skulls";
 				this.blue++;
-			} else if (percent > 33.33 && percent <= 66.67) {
+			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "AUG | Wings";
 				this.blue++;
-			} else if (percent > 66.67 && percent <= 101) {
+			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "SG 553 | Ultraviolet";
 				this.blue++;
 			}
@@ -43,13 +48,13 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 33.33) {
+			if (percent >= 0 && percent <= 33.66) {
 				itemname = "M4A1-S | Dark Water";
 				this.purple++;
-			} else if (percent > 33.33 && percent <= 66.67) {
+			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "USP-S | Dark Water";
 				this.purple++;
-			} else if (percent > 66.67 && percent <= 101) {
+			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "Glock-18 | Dragon Tattoo";
 				this.purple++;
 			}
@@ -57,10 +62,10 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50.0) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "Desert Eagle | Hypnotic";
 				this.pink++;
-			} else if (percent > 50.0 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AK-47 | Case Hardened";
 				this.pink++;
 			}
@@ -85,19 +90,19 @@ public class CsgoCases extends ReferenceCase {
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 20.0) {
+			if (percent >= 0 && percent <= 20.2) {
 				itemname = "SCAR-20 | Crimson Web";
 				this.blue++;
-			} else if (percent > 20.0 && percent <= 40.0) {
+			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "FAMAS | Hexane";
 				this.blue++;
-			} else if (percent > 40.0 && percent <= 60.0) {
+			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "P-250 | Hive";
 				this.blue++;
-			} else if (percent > 60.0 && percent <= 80.0) {
+			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "Tec-9 | Blue Titanium";
 				this.blue++;
-			} else if (percent > 80.0 && percent <= 101) {
+			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "M4A1-S | Blood Tiger";
 				this.blue++;
 			}
@@ -105,16 +110,16 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 25.0) {
+			if (percent >= 0 && percent <= 25.25) {
 				itemname = "Dual Berettas | Hemoglobin";
 				this.purple++;
-			} else if (percent > 25.0 && percent <= 50.0) {
+			} else if (percent > 25.25 && percent <= 50.50) {
 				itemname = "Nova | Graphite";
 				this.purple++;
-			} else if (percent > 50.0 && percent <= 75.0) {
+			} else if (percent > 50.50 && percent <= 75.75) {
 				itemname = "Five-Seven | Case Hardened";
 				this.purple++;
-			} else if (percent > 75.0 && percent <= 101) {
+			} else if (percent > 75.75 && percent <= 101) {
 				itemname = "MP9 | Hypnotic";
 				this.purple++;
 			}
@@ -122,10 +127,10 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50.0) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "USP-S | Serum";
 				this.pink++;
-			} else if (percent > 50.0 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "P90 | Cold Blooded";
 				this.pink++;
 			}
@@ -150,19 +155,19 @@ public class CsgoCases extends ReferenceCase {
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 20.0) {
+			if (percent >= 0 && percent <= 20.2) {
 				itemname = "Dual Berettas | Panther";
 				this.blue++;
-			} else if (percent > 20.0 && percent <= 40.0) {
+			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "P2000 | Red FragCam";
 				this.blue++;
-			} else if (percent > 40.0 && percent <= 60.0) {
+			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "Glock-18 | Blue Fissure";
 				this.blue++;
-			} else if (percent > 60.0 && percent <= 80.0) {
+			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "C275-Auto | Crimson Web";
 				this.blue++;
-			} else if (percent > 80.0 && percent <= 101) {
+			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "USP-S | Stainless";
 				this.blue++;
 			}
@@ -170,16 +175,16 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 25.0) {
+			if (percent >= 0 && percent <= 25.25) {
 				itemname = "C275-Auto | Tread Plate";
 				this.purple++;
-			} else if (percent > 25.0 && percent <= 50.0) {
+			} else if (percent > 25.25 && percent <= 50.50) {
 				itemname = "Tec-9 | Titanium Bit";
 				this.purple++;
-			} else if (percent > 50.0 && percent <= 75.0) {
+			} else if (percent > 50.50 && percent <= 75.75) {
 				itemname = "Five-SeveN | Copper Galaxy";
 				this.purple++;
-			} else if (percent > 75.0 && percent <= 101) {
+			} else if (percent > 75.75 && percent <= 101) {
 				itemname = "Desert Eagle | Heirloom";
 				this.purple++;
 			}
@@ -187,10 +192,10 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50.0) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "C275-Auto | The Fuschia Is Now";
 				this.pink++;
-			} else if (percent > 50.0 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "P250 | Undertow";
 				this.pink++;
 			}
@@ -215,19 +220,19 @@ public class CsgoCases extends ReferenceCase {
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 20.0) {
+			if (percent >= 0 && percent <= 20.2) {
 				itemname = "XM1014 | Quicksilver";
 				this.blue++;
-			} else if (percent > 20.0 && percent <= 40.0) {
+			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "SCAR-20 | Grotto";
 				this.blue++;
-			} else if (percent > 40.0 && percent <= 60.0) {
+			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "Glock-18 | Catacombs";
 				this.blue++;
-			} else if (percent > 60.0 && percent <= 80.0) {
+			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "M249 | System Lock";
 				this.blue++;
-			} else if (percent > 80.0 && percent <= 101) {
+			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "MP9 | Deadly Poison";
 				this.blue++;
 			}
@@ -235,16 +240,16 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 25.0) {
+			if (percent >= 0 && percent <= 25.25) {
 				itemname = "Sawed-Off | Serenity";
 				this.purple++;
-			} else if (percent > 25.0 && percent <= 50.0) {
+			} else if (percent > 25.25 && percent <= 50.50) {
 				itemname = "Dual Berettas | Urban Shock";
 				this.purple++;
-			} else if (percent > 50.0 && percent <= 75.0) {
+			} else if (percent > 50.50 && percent <= 75.75) {
 				itemname = "MAC-10 | Malachite";
 				this.purple++;
-			} else if (percent > 75.0 && percent <= 101) {
+			} else if (percent > 75.75 && percent <= 101) {
 				itemname = "Desert Eagle | Naga";
 				this.purple++;
 			}
@@ -252,13 +257,13 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 33.6) {
+			if (percent >= 0 && percent <= 33.66) {
 				itemname = "P250 | Muertos";
 				this.pink++;
-			} else if (percent > 33.6 && percent <= 67.2) {
+			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "AK-47 | Cartel";
 				this.pink++;
-			} else if (percent > 67.2 && percent <= 101) {
+			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "M4A4 | 龍王 (Dragon King)";
 				this.pink++;
 			}
@@ -266,10 +271,10 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Pink";
 		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "Galil AR | Chatterbox";
 				this.pink++;
-			} else if (percent > 50 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AWP | Man-o'-war";
 				this.red++;
 			}
@@ -312,16 +317,16 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 25.0) {
+			if (percent >= 0 && percent <= 25.25) {
 				itemname = "UMP-45 | Grand Prix";
 				this.purple++;
-			} else if (percent > 25.0 && percent <= 50.0) {
+			} else if (percent > 25.25 && percent <= 50.50) {
 				itemname = "CZ75-Auto | Pole Position";
 				this.purple++;
-			} else if (percent > 50.0 && percent <= 75.0) {
+			} else if (percent > 50.50 && percent <= 75.75) {
 				itemname = "MAG-7 | Heat";
 				this.purple++;
-			} else if (percent > 75.0 && percent <= 101) {
+			} else if (percent > 75.75 && percent <= 101) {
 				itemname = "AWP | Worm God";
 				this.purple++;
 			}
@@ -329,13 +334,13 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 33.6) {
+			if (percent >= 0 && percent <= 33.66) {
 				itemname = "FAMAS | Djinn";
 				this.pink++;
-			} else if (percent > 33.6 && percent <= 67.2) {
+			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "Five-SeveN | Monkey Business";
 				this.pink++;
-			} else if (percent > 67.2 && percent <= 101) {
+			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "Galil AR | Eco";
 				this.pink++;
 			}
@@ -343,10 +348,10 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Pink";
 		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "MAC-10 | Neon Rider";
 				this.pink++;
-			} else if (percent > 50 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A1-S | Hyper Beast";
 				this.red++;
 			}
@@ -392,19 +397,19 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Blue";
 		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 20.0) {
+			if (percent >= 0 && percent <= 20.2) {
 				itemname = "Tec-9 | Re-Entry";
 				this.purple++;
-			} else if (percent > 20.0 && percent <= 40.0) {
+			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "Galil AR | Firefight";
 				this.purple++;
-			} else if (percent > 40.0 && percent <= 60.0) {
+			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "XM1014 | Black Tie";
 				this.purple++;
-			} else if (percent > 60.0 && percent <= 80.0) {
+			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "CZ75-Auto | Red Astor";
 				this.purple++;
-			} else if (percent > 80.0 && percent <= 101) {
+			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "SSG 08 | Ghost Crusader";
 				this.purple++;
 			}
@@ -412,13 +417,13 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Purple";
 		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 33.6) {
+			if (percent >= 0 && percent <= 33.66) {
 				itemname = "UMP-45 | Primal Saber";
 				this.pink++;
-			} else if (percent > 33.6 && percent <= 67.2) {
+			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "AUG | Fleet Flock";
 				this.pink++;
-			} else if (percent > 67.2 && percent <= 101) {
+			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "P250 | Asiimov";
 				this.pink++;
 			}
@@ -426,12 +431,214 @@ public class CsgoCases extends ReferenceCase {
 			rarity = "Pink";
 		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
 			percent = 100 * Math.random() + 1;
-			if (percent >= 0 && percent <= 50) {
+			if (percent >= 0 && percent <= 50.5) {
 				itemname = "PP-Bizon | Judgement of Anubis";
 				this.pink++;
-			} else if (percent > 50 && percent <= 101) {
+			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A1-S | Chantico's Fire";
 				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			itemname = KnifeSkinGenerator.KnifeType();
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity);
+	}
+
+	public void eSports2013Case() { // eSports 2013 CASE
+		// #s: blue = 3, purple = 3, pink = 2, red = 1, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.36) {
+				itemname = "M4A4 | Faded Zebra";
+				this.blue++;
+			} else if (percent > 33.36 && percent <= 67.32) {
+				itemname = "FAMAS | Doomkitty";
+				this.blue++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "MAG-7 | Memento";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "Galil AR | Orange DDPAT";
+				this.purple++;
+			} else if (percent > 33.33 && percent <= 67.32) {
+				itemname = "P250 | Splash";
+				this.purple++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "Sawed-Off | Orange DDPAT";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "AWP | BOOM";
+				this.pink++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Red Laminate";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			itemname = "P90 | Death by Kitty";
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			itemname = KnifeSkinGenerator.KnifeType();
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity);
+	}
+
+	public void eSports2013WinterCase() { // eSports 2013 Winter Case
+		// #s: blue = 6, purple = 2, pink = 3, red = 1, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "Galil AR | Blue Titanium";
+				this.blue++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "Nova | Ghost Camo";
+				this.blue++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "P250 | Steel Disruption";
+				this.blue++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "G3SG1 | Azure Zebra";
+				this.blue++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "PP-Bizon | Water Sigil";
+				this.blue++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "Five-SeveN | Nightshade";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "AK-47 | Blue Laminate";
+				this.purple++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "P90 | Blind Spot";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "Desert Eagle | Cobalt Disruption";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "AWP | Electric Hive";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "FAMAS | Afterimage";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			itemname = "M4A4 | X-Ray";
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			itemname = KnifeSkinGenerator.KnifeType();
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity);
+	}
+
+	public void eSports2014SummerCase() { // eSports 2014 Summer Case
+		// #s: blue = 6, purple = 5, pink = 4, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "XM1014 | Red Python";
+				this.blue++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "SSG 08 | Dark Water";
+				this.blue++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "CZ75-Auto | Hexane";
+				this.blue++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "USP-S | Blood Tiger";
+				this.blue++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "Negev | Bratatat";
+				this.blue++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "MAC-10 | Ultraviolet";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "Glock-18 | Steel Disruption";
+				this.purple++;
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "P90 | Virus";
+				this.purple++;
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "PP-Bizon | Blue Streak";
+				this.purple++;
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "MP7 | Ocean Foam";
+				this.purple++;
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "Desert Eagle | Crimson Web";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "P2000 | Corticera";
+				this.pink++;
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "AWP | Corticera";
+				this.pink++;
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "Nova | Bloomstick";
+				this.pink++;
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "AUG | Bengal Tiger";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "M4A4 | Bullet Rain";
+				this.pink++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Jaguar";
+				this.pink++;
 			}
 			totalred++;
 			rarity = "Red";
