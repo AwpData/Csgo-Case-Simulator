@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ItemStatistics extends ClientInterface {
-	private String rarity, itemname, wear;
+	private String rarity, itemname, wear, flavortext;
 	private double itemfloat;
 	static public int stattrak;
 	static private ArrayList<String> items = new ArrayList<>();
@@ -29,20 +29,24 @@ public class ItemStatistics extends ClientInterface {
 
 	// 10% chance of getting stattrak
 	private void statTrak(String itemname) { // 1st step
-		double percent = 100 * Math.random() + 1;
-		if (percent >= 62.0 && percent <= 72.0) { // Is stattrak
-			if (rarity.equals("Gold")) { // If knife add star and then trademark symbol
-				this.itemname = "\u2605 StatTrak\u2122 " + itemname;
-			} else {
-				this.itemname = "StatTrak\u2122 " + itemname;
-			}
-			stattrak++;
+		if (itemname.contains("Glove") || itemname.contains("Wrap")) {
+			wear(itemname);
 		} else {
-			if (rarity.equals("Gold")) { // If it is a knife add the star icon "★"
-				this.itemname = "\u2605 " + itemname;
+			double percent = 100 * Math.random() + 1;
+			if (percent >= 62.0 && percent <= 72.0) { // Is stattrak
+				if (rarity.equals("Gold")) { // If knife add star and then trademark symbol
+					this.itemname = "\u2605 StatTrak\u2122 " + itemname;
+				} else {
+					this.itemname = "StatTrak\u2122 " + itemname;
+				}
+				stattrak++;
+			} else {
+				if (rarity.equals("Gold")) { // If it is a knife add the star icon "★"
+					this.itemname = "\u2605 " + itemname;
+				}
 			}
+			wear(itemname);
 		}
-		wear(itemname);
 	}
 
 	private void wear(String itemname) { // 2nd step
