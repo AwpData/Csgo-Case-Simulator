@@ -12,6 +12,8 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 	// Pink: 500 credits; With Stattrak: 1,000 credits
 	// Red: 1,000 credits; With Stattrak: 2,000 credits
 	// Gold: 2,500 credits; With Stattrak: 5,000 credits
+	// ---------- PRICE MULTIPLIERS -------------
+	// FN: *2.4, MW: *1.7, FT: *1.3, WW: *1.3, BS: *1.15
 
 	public static String MainMenu() {
 		System.out.println("Which case would you like to buy? (Enter number) \n");
@@ -21,7 +23,12 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("4. Chroma Case");
 		System.out.println("5. Chroma 2 Case");
 		System.out.println("6. Chroma 3 Case");
-		System.out.println("7. Small Credits Case");
+		System.out.println("7. eSports 2013 Case");
+		System.out.println("8. eSports 2013 Winter Case");
+		System.out.println("9. eSports 2014 Summer Case");
+		System.out.println("10. Falchion Case");
+		System.out.println("11. Gamma Case");
+		System.out.println("12. Small Credits Case");
 		System.out.println("\nType \"sell\" to sell a skin");
 		System.out.println("Type \"quit\" to quit");
 		return input.next();
@@ -79,52 +86,58 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 	}
 
 	public static void addCreditsFromSell(String item) {
+		int price = 0;
 		if (item.contains("[BLUE]")) {
 			if (item.contains("StatTrak")) {
-				System.out.println("Your item was worth 50 credits");
-				credits += 50;
+				price += 50;
 			} else {
-				System.out.println("Your item was worth 25 credits");
-				credits += 25;
+				price += 25;
 			}
+			ReferenceCase.totalbluesold++;
 		} else if (item.contains("[PURPLE]")) {
 			if (item.contains("StatTrak")) {
-				System.out.println("Your item was worth 200 credits");
-				credits += 200;
+				price += 200;
 			} else {
-				System.out.println("Your item was worth 100 credits");
-				credits += 100;
+				price += 100;
 			}
+			ReferenceCase.totalpurplesold++;
 		} else if (item.contains("[PINK]")) {
 			if (item.contains("StatTrak")) {
-				System.out.println("Your item was worth 1,000 credits");
-				credits += 1000;
+				price += 1000;
 			} else {
-				System.out.println("Your item was worth 500 credits");
-				credits += 500;
+				price += 500;
 			}
+			ReferenceCase.totalpinksold++;
 		} else if (item.contains("[RED]")) {
 			if (item.contains("StatTrak")) {
-				System.out.println("Your item was worth 2,000 credits");
-				credits += 2000;
+				price += 2000;
 			} else {
-				System.out.println("Your item was worth 1,000 credits");
-				credits += 1000;
+				price += 1000;
 			}
+			ReferenceCase.totalredsold++;
 		} else if (item.contains("[GOLD]")) {
 			if (item.contains("StatTrak")) {
-				System.out.println("Your item was worth 5,000 credits");
-				credits += 5000;
+				price += 5000;
 			} else {
-				System.out.println("Your item was worth 2,500 credits");
-				credits += 2500;
+				price += 2500;
 			}
+			ReferenceCase.totalgoldsold++;
 		}
-		System.out.println("\nPress ENTER to go back to the main menu");
-		promptEnterKey();
+
+		if (item.contains("Factory-New")) {
+			price += price * 2.4;
+		} else if (item.contains("Minimal-Wear")) {
+			price += price * 1.7;
+		} else if (item.contains("Field-Tested")) {
+			price += price * 1.3;
+		} else if (item.contains("Well-Worn")) {
+			price += price * 1.15;
+		} // else if battle-scarred, the price is 1x
+		credits += price;
+		System.out.println("Your item was worth " + price + " credits\n");
 	}
 
-	public static void promptEnterKey() { // Troubleshoot ENTER key method
+	public static void promptEnterKey() { // ENTER key method
 		try {
 			System.in.read(new byte[2]);
 		} catch (IOException e) {
