@@ -1,6 +1,7 @@
 public class ReferenceCase {
 	protected int white, lightblue, blue, purple, pink, red, gold;
 	static protected int totalwhite = 0, totallightblue = 0, totalblue = 0, totalpurple = 0, totalpink = 0, totalred = 0, totalgold = 0, totalcreditswon = 0;
+	static protected int totalwhitesold = 0, totallightbluesold = 0, totalbluesold = 0, totalpurplesold = 0, totalpinksold = 0, totalredsold = 0, totalgoldsold = 0;
 
 	public ReferenceCase() {
 		this.white = 0;
@@ -14,13 +15,13 @@ public class ReferenceCase {
 
 	public static void getTotalWinnings() {
 		System.out.println("Total Winnings this session:\n"); // Set # of new skins and # of duplicate skins found (based in text file) later
-		System.out.println("White (Consumer Grade): " + totalwhite);
-		System.out.println("LightBlue (Industrial Grade): " + totallightblue);
-		System.out.println("Blue (Mil-Spec): " + totalblue);
-		System.out.println("Purple (Restricted): " + totalpurple);
-		System.out.println("Pink (Classified): " + totalpink);
-		System.out.println("Red (Covert): " + totalred);
-		System.out.println("Gold (Exceedingly Rare): " + totalgold);
+		System.out.println("White (Consumer Grade): " + totalwhite + " [" + totalwhitesold + " sold]");
+		System.out.println("LightBlue (Industrial Grade): " + totallightblue + " [" + totallightbluesold + " sold]");
+		System.out.println("Blue (Mil-Spec): " + totalblue + " [" + totalbluesold + " sold]");
+		System.out.println("Purple (Restricted): " + totalpurple + " [" + totalpurplesold + " sold]");
+		System.out.println("Pink (Classified): " + totalpink + " [" + totalpinksold + " sold]");
+		System.out.println("Red (Covert): " + totalred + " [" + totalredsold + " sold]");
+		System.out.println("Gold (Exceedingly Rare): " + totalgold + " [" + totalgoldsold + " sold]");
 		System.out.println("Credits: " + totalcreditswon);
 	}
 
