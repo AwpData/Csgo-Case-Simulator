@@ -17,6 +17,8 @@ import java.io.*;
 // eSports 2013 Case
 // eSports 2013 Winter Case
 // eSports 2014 Summer Case
+// Falchion Case
+// Gamma Case
 // Small Credits Case 
 
 // PACKAGES IMPLEMENTED
@@ -24,7 +26,7 @@ import java.io.*;
 // SOUVENIRS IMPLEMENTED
 
 public class ClientInterface {
-	static int credits = 999999; // change this to any value
+	static int credits = 10000; // change this to any value
 
 	public static void main(String[] args) throws FileNotFoundException {
 		String selection = "";
@@ -44,37 +46,51 @@ public class ClientInterface {
 			// ----------- Miscellaneous Options ----------- //
 			if (selection.equalsIgnoreCase("quit")) { // Quit program
 				ReferenceCase.getTotalWinnings();
+				System.out.println("\nCheck inventory.txt to see your winnings");
 				System.out.println("\nQuitting program...");
 				System.exit(0);
 			}
 			if (selection.equalsIgnoreCase("sell")) {
-				System.out.println("Enter the line of the skin you would like to sell (In inventory.txt)");
-				int index = HelperMethods.input.nextInt();
-				String item = ItemStatistics.sellSkin(index);
-				HelperMethods.addCreditsFromSell(item);
+				if (ItemStatistics.getItemList().size() == 0) {
+					System.out.println("There is nothing to sell!\n");
+				} else {
+					System.out.println("Enter the line number of the skin you would like to sell\n");
+					for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
+						System.out.println((i + 1) + ". " + ItemStatistics.getItemList().get(i));
+					}
+					int index = HelperMethods.input.nextInt();
+					String item = ItemStatistics.sellSkin(index);
+					HelperMethods.addCreditsFromSell(item);
+				}
+				System.out.println("Press ENTER to go back to the main menu");
+				HelperMethods.promptEnterKey();
 			}
 
 			// ----------- Case Option Advancement Methods ----------- //
 			if (selection.equals("1")) { // CSGO Weapons Case
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 100, "CsgoWeaponsCase", "case");
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 1300, "CsgoWeaponsCase", "case");
 			} else if (selection.equals("2")) { // CSGO Weapons Case 2
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 50, "CsgoWeaponsCase2", "case");
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 2", 1200, "CsgoWeaponsCase2", "case");
 			} else if (selection.equals("3")) { // CSGO Weapons Case 3
-				proceed = HelperMethods.buyCheck("CSGO Weapons Case 3", 30, "CsgoWeaponsCase3", "case");
+				proceed = HelperMethods.buyCheck("CSGO Weapons Case 3", 400, "CsgoWeaponsCase3", "case");
 			} else if (selection.equals("4")) { // Chroma Case
-				proceed = HelperMethods.buyCheck("Chroma Case", 30, "ChromaCase", "case");
+				proceed = HelperMethods.buyCheck("Chroma Case", 200, "ChromaCase", "case");
 			} else if (selection.equals("5")) { // Chroma 2 Case
-				proceed = HelperMethods.buyCheck("Chroma 2 Case", 30, "Chroma2Case", "case");
+				proceed = HelperMethods.buyCheck("Chroma 2 Case", 50, "Chroma2Case", "case");
 			} else if (selection.equals("6")) { // Chroma 3 Case
 				proceed = HelperMethods.buyCheck("Chroma 3 Case", 30, "Chroma3Case", "case");
 			} else if (selection.equals("7")) { // eSports 2013 Case
-				proceed = HelperMethods.buyCheck("eSports 2013 Case", 50, "eSports2013Case", "case");
+				proceed = HelperMethods.buyCheck("eSports 2013 Case", 1700, "eSports2013Case", "case");
 			} else if (selection.equals("8")) { // eSports 2013 Winter Case
-				proceed = HelperMethods.buyCheck("eSports 2013 Winter Case", 30, "eSports2013WinterCase", "case");
+				proceed = HelperMethods.buyCheck("eSports 2013 Winter Case", 550, "eSports2013WinterCase", "case");
 			} else if (selection.equals("9")) { // eSports 2014 Summer Case
-				proceed = HelperMethods.buyCheck("eSports 2014 Summer Case", 40, "eSports2014SummerCase", "case");
-			} else if (selection.equals("10")) { // Small Credits Case
-				proceed = HelperMethods.buyCheck("Small Credits Case", 20, "SmallCreditsCase", "case");
+				proceed = HelperMethods.buyCheck("eSports 2014 Summer Case", 850, "eSports2014SummerCase", "case");
+			} else if (selection.equals("10")) { // eSports 2014 Summer Case
+				proceed = HelperMethods.buyCheck("Falchion Case", 90, "FalchionCase", "case");
+			} else if (selection.equals("11")) { // eSports 2014 Summer Case
+				proceed = HelperMethods.buyCheck("Gamma Case", 30, "GammaCase", "case");
+			} else if (selection.equals("12")) { // Small Credits Case
+				proceed = HelperMethods.buyCheck("Small Credits Case", 25, "SmallCreditsCase", "case");
 				if (proceed == true) {
 					credits += CreditsCases.getCreditsWin();
 				}
