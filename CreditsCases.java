@@ -6,9 +6,9 @@ public class CreditsCases extends ReferenceCase {
 	}
 
 	// PRICE GUIDE:
-	// Small credits lootbox = 20 credits
+	// Small credits lootbox = 25 credits
 
-	// FOR SMALL CREDITS CASE (Costs 20 Credits)
+	// Small credits case percentage data
 	// 10 credits = 1-28%
 	// 20 credits = 29-51%
 	// 30 credits = 52-71% //remove all these lines later
@@ -18,23 +18,23 @@ public class CreditsCases extends ReferenceCase {
 
 	public void SmallCreditsCase() {
 		int percent = (int) ((int) 100 * Math.random() + 1);
-		if (percent >= 1 && percent <= 28) {
+		if (percent >= 0 && percent <= 28) {
 			System.out.print("10 credits");
 			this.white++;
 			credit = 10;
-		} else if (percent >= 29 && percent <= 51) {
+		} else if (percent > 28 && percent <= 51) {
 			System.out.print("20 credits");
 			this.lightblue++;
 			credit = 20;
-		} else if (percent >= 52 && percent <= 72) {
+		} else if (percent > 51 && percent <= 72) {
 			System.out.print("30 credits");
 			this.blue++;
 			credit = 30;
-		} else if (percent >= 73 && percent <= 87) {
+		} else if (percent > 72 && percent <= 87) {
 			System.out.print("40 credits");
 			this.purple++;
 			credit = 40;
-		} else if (percent >= 88 && percent <= 99) {
+		} else if (percent > 87 && percent <= 99) {
 			System.out.print("50 credits");
 			this.pink++;
 			credit = 50;
