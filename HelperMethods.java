@@ -28,7 +28,9 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("9. eSports 2014 Summer Case");
 		System.out.println("10. Falchion Case");
 		System.out.println("11. Gamma Case");
-		System.out.println("12. Small Credits Case");
+		System.out.println("12. Gamma 2 Case");
+		System.out.println("13. Glove Case");
+		System.out.println("14. Small Credits Case");
 		System.out.println("\nType \"sell\" to sell a skin");
 		System.out.println("Type \"quit\" to quit");
 		return input.next();
