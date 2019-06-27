@@ -1,6 +1,6 @@
 
 public class KnifeSkinGenerator extends CsgoCases {
-	static private String itemname;
+	static private String itemname, flavortext;
 
 	// Butterfly Knife exclusive to Operation Breakout
 	// Falchion Knife exclusive to Falchion Case
