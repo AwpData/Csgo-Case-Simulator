@@ -1,15 +1,20 @@
 import java.util.*;
 
 public class ItemStatistics extends ClientInterface {
-	private String rarity, itemname, wear, flavortext;
+	private String rarity, itemname, wear, flavortext, skindescription;
 	private double itemfloat;
 	static public int stattrak;
-	static private ArrayList<String> items = new ArrayList<>();
+	static private ArrayList<ItemStatistics> itemlist = new ArrayList<>();
 
-	public ItemStatistics(String itemname, String rarity) {
-		this.itemname = itemname;
+	public ItemStatistics(String itemname, String rarity, String flavortext, String skindescription) {
 		this.rarity = rarity;
-		this.statTrak(itemname);
+		this.itemname = statTrak(itemname, this.rarity);
+		this.wear = wear(this.itemname);
+		this.itemfloat = itemfloat(this.wear);
+		this.flavortext = flavortext;
+		this.skindescription = skindescription;
+		itemlist.add(this);
+		System.out.print(this.toString());
 	}
 
 	// FLOAT GUIDE:
@@ -28,28 +33,28 @@ public class ItemStatistics extends ClientInterface {
 	// red = covert
 
 	// 10% chance of getting stattrak
-	private void statTrak(String itemname) { // 1st step
+	private String statTrak(String itemname, String rarity) { // 1st step
 		if (itemname.contains("Glove") || itemname.contains("Wrap")) {
-			wear(itemname);
+			return itemname;
 		} else {
 			double percent = 100 * Math.random() + 1;
 			if (percent >= 62.0 && percent <= 72.0) { // Is stattrak
 				if (rarity.equals("Gold")) { // If knife add star and then trademark symbol
-					this.itemname = "\u2605 StatTrak\u2122 " + itemname;
+					itemname = "\u2605 StatTrak\u2122 " + itemname;
 				} else {
-					this.itemname = "StatTrak\u2122 " + itemname;
+					itemname = "StatTrak\u2122 " + itemname;
 				}
 				stattrak++;
 			} else {
 				if (rarity.equals("Gold")) { // If it is a knife add the star icon "★"
-					this.itemname = "\u2605 " + itemname;
+					itemname = "\u2605 " + itemname;
 				}
 			}
-			wear(itemname);
+			return itemname;
 		}
 	}
 
-	private void wear(String itemname) { // 2nd step
+	private String wear(String itemname) { // 2nd step
 		String wear = "";
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent < 20.0) {
@@ -63,10 +68,10 @@ public class ItemStatistics extends ClientInterface {
 		} else if (percent >= 80.0 && percent <= 101) {
 			wear = "(Factory-New)";
 		}
-		itemfloat(wear);
+		return wear;
 	}
 
-	private void itemfloat(String wear) { // 3rd step
+	private double itemfloat(String wear) { // 3rd step
 		if (wear.equals("(Factory-New)")) {
 			itemfloat = 0.07 * Math.random();
 		} else if (wear.equals("(Minimal-Wear)")) {
@@ -78,20 +83,15 @@ public class ItemStatistics extends ClientInterface {
 		} else if (wear.equals("(Battle-Scarred)")) {
 			itemfloat = 0.56 * Math.random() + 0.44;
 		}
-		printItemDescription(itemname, wear, rarity, itemfloat);
-	}
-
-	private void printItemDescription(String itemname, String wear, String rarity, double itemfloat) { // 4bth step
-		items.add("[" + rarity.toUpperCase() + "]" + "\t" + itemname + " " + wear);
-		System.out.print("[" + rarity.toUpperCase() + "]" + " " + itemname + " " + wear + ", Float: " + itemfloat);
+		return itemfloat;
 	}
 
 	public static String sellSkin(int index) {
 		String item;
-		for (int i = 0; i < items.size(); i++) {
+		for (int i = 0; i < itemlist.size(); i++) {
 			if (i == index - 1) {
-				item = items.get(i);
-				items.remove(i);
+				item = itemlist.get(i).toString();
+				itemlist.remove(i);
 				System.out.println("Successfully sold: " + item);
 				return item;
 			}
@@ -99,8 +99,25 @@ public class ItemStatistics extends ClientInterface {
 		return "Skin not found!";
 	}
 
-	public static ArrayList<String> getItemList() {
-		return items;
+	public static void inspectSkin(int index) {
+		for (int i = 0; i <= itemlist.size(); i++) {
+			if (i == index) {
+				ItemStatistics item = itemlist.get(i - 1);
+				System.out.println("\nColor/Name: " + item.getRarity() + " " + item.getItemName());
+				System.out.println("Wear: " + item.getWear());
+				System.out.println("Float: " + item.getItemFloat());
+				System.out.println("Skin Description: " + item.getSkinDescription());
+				System.out.println("Flavortext: \"" + item.getFlavorText() + "\"\n");
+			}
+		}
+	}
+
+	public static ArrayList<ItemStatistics> getItemList() {
+		return itemlist;
+	}
+
+	public String toString() {
+		return ("[" + rarity.toUpperCase() + "]" + " " + itemname + " " + wear);
 	}
 
 	public String getWear() {
@@ -108,7 +125,7 @@ public class ItemStatistics extends ClientInterface {
 	}
 
 	public String getRarity() {
-		return rarity;
+		return "[" + rarity.toUpperCase() + "]";
 	}
 
 	public double getItemFloat() {
@@ -117,6 +134,14 @@ public class ItemStatistics extends ClientInterface {
 
 	public String getItemName() {
 		return itemname;
+	}
+
+	public String getFlavorText() {
+		return flavortext;
+	}
+
+	public String getSkinDescription() {
+		return skindescription;
 	}
 
 	public static int getStattrak() {
