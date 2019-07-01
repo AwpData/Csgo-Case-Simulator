@@ -1,9 +1,9 @@
-public class ReferenceCase {
+public class ItemColorTracker {
 	protected int white, lightblue, blue, purple, pink, red, gold;
 	static protected int totalwhite = 0, totallightblue = 0, totalblue = 0, totalpurple = 0, totalpink = 0, totalred = 0, totalgold = 0, totalcreditswon = 0;
 	static protected int totalwhitesold = 0, totallightbluesold = 0, totalbluesold = 0, totalpurplesold = 0, totalpinksold = 0, totalredsold = 0, totalgoldsold = 0;
 
-	public ReferenceCase() {
+	public ItemColorTracker() {
 		this.white = 0;
 		this.lightblue = 0;
 		this.blue = 0;
