@@ -11,7 +11,7 @@ import java.io.*;
  * NOTE: Other classes have useful keys for the data if you are confused!
  */
 
-// CASES IMPLEMENTED
+// CASES IMPLEMENTED (CsgoCases.java)
 // Csgo Weapons Cases (1-3)
 // Chroma Cases (1-3)
 // eSports 2013 Case
@@ -20,54 +20,50 @@ import java.io.*;
 // Falchion Case
 // Gamma Cases (1-2)
 // Glove Case
+// Huntsman Case
+// Operation Bravo Case
+// Operation Breakout Case
+// Operation Hydra Case
+// Operation Phoenix Case
 // Small Credits Case 
 
-// PACKAGES IMPLEMENTED
+// PACKAGES IMPLEMENTED (CsgoPackages.java)
 
-// SOUVENIRS IMPLEMENTED
+// SOUVENIRS IMPLEMENTED (CsgoSouvenirs.java)
+
+// CUSTOM CASES IMPLEMENTED (CustomCases.java)
 
 public class ClientInterface {
-	static int credits = 10000; // change this to any value
+	static int credits = 999999999;
 
 	public static void main(String[] args) throws FileNotFoundException {
 		String selection = "";
 		boolean proceed = false, mainloop = true;
 		while (mainloop) {
 
-			// ----------- Prints Out Inventory Of Items ----------- //
+			// ----------- Prints Out Inventory Of Items In File ----------- //
 			PrintStream output = new PrintStream(new File("src/inventory.txt"));
 			for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
-				output.println(ItemStatistics.getItemList().get(i));
+				output.println(ItemStatistics.getItemList().get(i).toString());
 			}
 			// ----------- Console Output Method ----------- //
 			System.out.println("Your credit balance is " + credits);
 			selection = HelperMethods.MainMenu();
-			System.out.println();
 
 			// ----------- Miscellaneous Options ----------- //
 			if (selection.equalsIgnoreCase("quit")) { // Quit program
-				ReferenceCase.getTotalWinnings();
-				System.out.println("\nCheck inventory.txt to see your winnings");
-				System.out.println("\nQuitting program...");
-				System.exit(0);
+				HelperMethods.quit();
 			}
 			if (selection.equalsIgnoreCase("sell")) {
-				if (ItemStatistics.getItemList().size() == 0) {
-					System.out.println("There is nothing to sell!\n");
-				} else {
-					System.out.println("Enter the line number of the skin you would like to sell\n");
-					for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
-						System.out.println((i + 1) + ". " + ItemStatistics.getItemList().get(i));
-					}
-					int index = HelperMethods.input.nextInt();
-					String item = ItemStatistics.sellSkin(index);
-					HelperMethods.addCreditsFromSell(item);
-				}
-				System.out.println("Press ENTER to go back to the main menu");
-				HelperMethods.promptEnterKey();
+				HelperMethods.sell();
+			}
+
+			if (selection.equalsIgnoreCase("inspect")) {
+				HelperMethods.inspect();
 			}
 
 			// ----------- Case Option Advancement Methods ----------- //
+
 			if (selection.equals("1")) {
 				proceed = HelperMethods.buyCheck("CSGO Weapons Case", 1300, "CsgoWeaponsCase", "case");
 			} else if (selection.equals("2")) {
@@ -95,6 +91,18 @@ public class ClientInterface {
 			} else if (selection.equals("13")) {
 				proceed = HelperMethods.buyCheck("Glove Case", 30, "GloveCase", "case");
 			} else if (selection.equals("14")) {
+				proceed = HelperMethods.buyCheck("Huntsman Weapon Case", 175, "HuntsmanWeaponCase", "case");
+			} else if (selection.equals("15")) {
+				proceed = HelperMethods.buyCheck("Operation Bravo Case", 2000, "OperationBravoCase", "case");
+			} else if (selection.equals("16")) {
+				proceed = HelperMethods.buyCheck("Operation Breakout Case", 140, "OperationBreakoutCase", "case");
+			} else if (selection.equals("17")) {
+				proceed = HelperMethods.buyCheck("Operation Hydra Case", 450, "OperationHydraCase", "case");
+			} else if (selection.equals("18")) {
+				proceed = HelperMethods.buyCheck("Operation Phoenix Case", 180, "OperationPhoenixCase", "case");
+			}
+			// ------------- Non Csgo Cases ------------- //
+			else if (selection.equals("19")) {
 				proceed = HelperMethods.buyCheck("Small Credits Case", 25, "SmallCreditsCase", "case");
 				if (proceed == true) {
 					credits += CreditsCases.getCreditsWin();
