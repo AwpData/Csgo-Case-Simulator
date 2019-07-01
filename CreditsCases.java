@@ -1,4 +1,4 @@
-public class CreditsCases extends ReferenceCase {
+public class CreditsCases extends ItemColorTracker {
 	protected static int creditswin, credit;
 
 	public CreditsCases() {
