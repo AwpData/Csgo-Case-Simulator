@@ -30,9 +30,15 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("11. Gamma Case");
 		System.out.println("12. Gamma 2 Case");
 		System.out.println("13. Glove Case");
-		System.out.println("14. Small Credits Case");
-		System.out.println("\nType \"sell\" to sell a skin");
-		System.out.println("Type \"quit\" to quit");
+		System.out.println("14. Huntsman Weapon Case");
+		System.out.println("15. Operaton Bravo Case");
+		System.out.println("16. Operaton Breakout Case");
+		System.out.println("17. Operaton Hydra Case");
+		System.out.println("18. Operaton Phoenix Case");
+		System.out.println("19. Small Credits Case");
+		System.out.println("\nType \"inspect\" to get full information on a skin in your inventory (Float, Flavortext, Skin Description, etc...)");
+		System.out.println("Type \"sell\" to sell a skin");
+		System.out.println("Type \"quit\" to quit\n");
 		return input.next();
 	}
 
@@ -81,10 +87,42 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 				Method method = objectname.getClass().getMethod(casename);
 				method.invoke(objectname);
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				System.out.println("ProgramError: How did this happen?");
+				System.out.println("Non-existant Casename");
 			}
 			System.out.println();
 		}
+	}
+
+	public static void inspect() {
+		if (ItemStatistics.getItemList().size() == 0) {
+			System.out.println("You have zero skins to inspect!\n");
+		} else {
+			System.out.println("Enter the line number of the skin you would like to inspect\n");
+
+			for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
+				System.out.println((i + 1) + ". " + ItemStatistics.getItemList().get(i).toString());
+			}
+			int index = input.nextInt();
+			ItemStatistics.inspectSkin(index);
+		}
+		System.out.println("Press ENTER to go back to the main menu");
+		promptEnterKey();
+	}
+
+	public static void sell() {
+		if (ItemStatistics.getItemList().size() == 0) {
+			System.out.println("There is nothing to sell!\n");
+		} else {
+			System.out.println("Enter the line number of the skin you would like to sell\n");
+			for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
+				System.out.println((i + 1) + ". " + ItemStatistics.getItemList().get(i).toString());
+			}
+			int index = input.nextInt();
+			String item = ItemStatistics.sellSkin(index);
+			addCreditsFromSell(item);
+		}
+		System.out.println("Press ENTER to go back to the main menu");
+		promptEnterKey();
 	}
 
 	public static void addCreditsFromSell(String item) {
@@ -95,35 +133,35 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 			} else {
 				price += 25;
 			}
-			ReferenceCase.totalbluesold++;
+			ItemColorTracker.totalbluesold++;
 		} else if (item.contains("[PURPLE]")) {
 			if (item.contains("StatTrak")) {
 				price += 200;
 			} else {
 				price += 100;
 			}
-			ReferenceCase.totalpurplesold++;
+			ItemColorTracker.totalpurplesold++;
 		} else if (item.contains("[PINK]")) {
 			if (item.contains("StatTrak")) {
 				price += 1000;
 			} else {
 				price += 500;
 			}
-			ReferenceCase.totalpinksold++;
+			ItemColorTracker.totalpinksold++;
 		} else if (item.contains("[RED]")) {
 			if (item.contains("StatTrak")) {
 				price += 2000;
 			} else {
 				price += 1000;
 			}
-			ReferenceCase.totalredsold++;
+			ItemColorTracker.totalredsold++;
 		} else if (item.contains("[GOLD]")) {
 			if (item.contains("StatTrak")) {
 				price += 5000;
 			} else {
 				price += 2500;
 			}
-			ReferenceCase.totalgoldsold++;
+			ItemColorTracker.totalgoldsold++;
 		}
 
 		if (item.contains("Factory-New")) {
@@ -137,6 +175,13 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		} // else if battle-scarred, the price is 1x
 		credits += price;
 		System.out.println("Your item was worth " + price + " credits\n");
+	}
+
+	public static void quit() {
+		ItemColorTracker.getTotalWinnings();
+		System.out.println("\nCheck inventory.txt to see your winnings");
+		System.out.println("\nQuitting program...");
+		System.exit(0);
 	}
 
 	public static void promptEnterKey() { // ENTER key method
