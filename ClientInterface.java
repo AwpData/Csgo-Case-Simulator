@@ -25,6 +25,14 @@ import java.io.*;
 // Operation Breakout Case
 // Operation Hydra Case
 // Operation Phoenix Case
+// Operation Vanguard Case
+// Operation Wildfire Case
+// Revolver Case
+// Shadow Case
+// Winter Offensive Case
+// Spectrum Case
+
+// CREDIT CASES IMPLEMENTED (CreditCases.java)
 // Small Credits Case 
 
 // PACKAGES IMPLEMENTED (CsgoPackages.java)
@@ -100,9 +108,21 @@ public class ClientInterface {
 				proceed = HelperMethods.buyCheck("Operation Hydra Case", 450, "OperationHydraCase", "case");
 			} else if (selection.equals("18")) {
 				proceed = HelperMethods.buyCheck("Operation Phoenix Case", 180, "OperationPhoenixCase", "case");
+			} else if (selection.equals("19")) {
+				proceed = HelperMethods.buyCheck("Operation Vanguard Case", 200, "OperationVanguardCase", "case");
+			} else if (selection.equals("20")) {
+				proceed = HelperMethods.buyCheck("Operation Wildfire Case", 70, "OperationWildfireCase", "case");
+			} else if (selection.equals("21")) {
+				proceed = HelperMethods.buyCheck("Revolver Case", 40, "RevolverCase", "case");
+			} else if (selection.equals("22")) {
+				proceed = HelperMethods.buyCheck("Shadow Case", 70, "ShadowCase", "case");
+			} else if (selection.equals("23")) {
+				proceed = HelperMethods.buyCheck("Winter Offensive Case", 200, "WinterOffensiveCase", "case");
+			} else if (selection.equals("24")) {
+				proceed = HelperMethods.buyCheck("Spectrum Case", 30, "SpectrumCase", "case");
 			}
 			// ------------- Non Csgo Cases ------------- //
-			else if (selection.equals("19")) {
+			else if (selection.equals("25")) {
 				proceed = HelperMethods.buyCheck("Small Credits Case", 25, "SmallCreditsCase", "case");
 				if (proceed == true) {
 					credits += CreditsCases.getCreditsWin();
