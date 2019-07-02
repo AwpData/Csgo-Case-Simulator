@@ -35,7 +35,13 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("16. Operaton Breakout Case");
 		System.out.println("17. Operaton Hydra Case");
 		System.out.println("18. Operaton Phoenix Case");
-		System.out.println("19. Small Credits Case");
+		System.out.println("19. Operaton Vanguard Case");
+		System.out.println("20. Operaton Wildfire Case");
+		System.out.println("21. Revolver Case");
+		System.out.println("22. Shadow Case");
+		System.out.println("23. Winter Offensive Case");
+		System.out.println("24. Spectrum Case");
+		System.out.println("25. Small Credits Case");
 		System.out.println("\nType \"inspect\" to get full information on a skin in your inventory (Float, Flavortext, Skin Description, etc...)");
 		System.out.println("Type \"sell\" to sell a skin");
 		System.out.println("Type \"quit\" to quit\n");
