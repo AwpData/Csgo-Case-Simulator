@@ -3,44 +3,52 @@ import java.util.*;
 public class KnifeSkinGenerator extends CsgoCases {
 	static private String itemname, flavortext = "N/A", skindescription;
 
-	// Butterfly Knife exclusive to Operation Breakout Case
-	// Falchion Knife exclusive to Falchion Case
-	// Huntsman Knife exclusive to Huntsman Case
-	// Shadow Daggers exclusive to Shadow Case
+	// WHERE EACH KNIFE IS IN EACH CASE (Non-skin exclusive: no dopplers or new knife skin cases)
+	// Navaja Knife, Stiletto Knife, Talon Knife, Ursus Knife -> Horizon, Danger Zone, Prisma
+	// Bowie Knife -> Operation Wildfire Case
+	// Butterfly Knife -> Operation Breakout Case
+	// Falchion Knife -> Falchion Case
+	// Huntsman Knife -> Huntsman Weapon Case
+	// Shadow Daggers -> Shadow Case
+	// Bayonet, Flip Knife, Gut Knife, Karambit, M9 Bayonet -> Revolver, OPC, OVC, WC3, eSports 2013W, eSports 2014S, WC2, Winter Offensive, WC1, eSports 2013, OBC, Chroma (1-3), Gamma (1-2), Spectrum (1-2)
 
-	public static ArrayList<String> KnifeType() { // Non-Exclusive Knives only
+	public static ArrayList<String> TheFourNewKnives() {
 		double percent = 100 * Math.random() + 1;
-		if (percent >= 0 && percent <= 10.1) {
-			itemname = "Talon Knife ";
-			skindescription = "This ivory-handled karambit features brass rivets and saw-tooth ridges, so it cuts on the way in, and tears on the way out.";
-		} else if (percent > 10.1 && percent <= 20.2) {
-			itemname = "Flip Knife ";
-			skindescription = "Flip knives sport a Persian-style back-swept blade with an acute point.";
-		} else if (percent > 20.2 && percent <= 30.3) {
-			itemname = "Bowie Knife ";
-			skindescription = "This full-tang sawback Bowie knife is designed for heavy use in brutal survival situations.";
-		} else if (percent > 30.3 && percent <= 40.4) {
-			itemname = "Navaja Knife ";
-			skindescription = "This marble-enamel-handled flip knife conceals a small but viciously tapered blade.";
-		} else if (percent > 40.4 && percent <= 50.5) {
-			itemname = "Ursus Knife ";
-			skindescription = "This tanto-style survival knife features a faceted blade and full tang, complete with impact pommel.";
-		} else if (percent > 50.5 && percent <= 60.6) {
-			itemname = "Bayonet ";
-			skindescription = "Relatively unchanged in its design since World War II, the bayonet still retains a place in modern military strategy.";
-		} else if (percent > 60.6 && percent <= 70.7) {
+		if (percent >= 0 && percent <= 25.25) {
 			itemname = "Stiletto Knife ";
 			skindescription = "This Italian-style stiletto switchblade knife features a spring-loaded blade that can be deployed almost instantly with the push of a release catch.";
-		} else if (percent > 70.7 && percent <= 80.8) {
-			itemname = "M9 Bayonet ";
-			skindescription = "Originally intended to be mounted on a rifle";
-		} else if (percent > 80.8 && percent <= 90.9) {
-			itemname = "Karambit ";
-			skindescription = "With its curved blade mimicking a tiger's claw, the karambit was developed as part of the southeast Asian martial discipline of silat.";
-		} else if (percent > 90.9 && percent <= 101) {
+		} else if (percent > 25.25 && percent <= 50.50) {
+			itemname = "Ursus Knife ";
+			skindescription = "This tanto-style survival knife features a faceted blade and full tang, complete with impact pommel.";
+		} else if (percent > 50.50 && percent <= 75.75) {
+			itemname = "Navaja Knife ";
+			skindescription = "This marble-enamel-handled flip knife conceals a small but viciously tapered blade.";
+		} else if (percent > 75.75 && percent <= 101) {
+			itemname = "Talon Knife ";
+			skindescription = "This ivory-handled karambit features brass rivets and saw-tooth ridges, so it cuts on the way in, and tears on the way out.";
+		}
+		return KnifeSkin(itemname, skindescription);
+	}
+
+	public static ArrayList<String> TheElevenCases() {
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 20.2) {
+			itemname = "Bayonet ";
+			skindescription = "Relatively unchanged in its design since World War II, the bayonet still retains a place in modern military strategy.";
+		} else if (percent > 20.2 && percent <= 40.4) {
+			itemname = "Flip Knife ";
+			skindescription = "Flip knives sport a Persian-style back-swept blade with an acute point.";
+		} else if (percent > 40.4 && percent <= 60.6) {
 			itemname = "Gut Knife ";
 			skindescription = "The most notable feature of a gut knife is the gut hook on the spine of the blade.";
+		} else if (percent > 60.6 && percent <= 80.8) {
+			itemname = "M9 Bayonet ";
+			skindescription = "Originally intended to be mounted on a rifle.";
+		} else if (percent > 80.8 && percent <= 101) {
+			itemname = "Karambit ";
+			skindescription = "With its curved blade mimicking a tiger's claw, the karambit was developed as part of the southeast Asian martial discipline of silat.";
 		}
+
 		return KnifeSkin(itemname, skindescription);
 	}
 
