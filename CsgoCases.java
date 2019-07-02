@@ -42,8 +42,14 @@ public class CsgoCases extends ItemColorTracker {
 	// Operation Breakout Case = 140 credits
 	// Operation Hydra Case = 450 credits
 	// Operation Phoenix Case = 180 credits
+	// Operation Vanguard Case = 200 credits
+	// Operation Wildfire Case = 70 credits
+	// Revolver Case = 40 credits
+	// Shadow Case = 70 credits
+	// Winter Offensive Case = 200 credits
+	// Spectrum Case = 30 credits
 
-	public void CsgoWeaponsCase() { // CSGO WEAPONS CASE
+	public void CsgoWeaponsCase() { // CSGO WEAPONS CASE (1)
 		// #s: blue = 3, purple = 3, pink = 2, red = 1, gold = 1
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
@@ -109,7 +115,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -193,7 +199,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -276,7 +282,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -288,7 +294,7 @@ public class CsgoCases extends ItemColorTracker {
 		flavortext = "N/A";
 	}
 
-	public void ChromaCase() { // CHROMA CASE
+	public void ChromaCase() { // CHROMA (1) CASE
 		// #s: blue = 5, purple = 4, pink = 3, red = 2, gold = 1
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
@@ -372,7 +378,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "Galil AR | Chatterbox";
 				flavortext = "Some say that when you laugh, the world laughs with you...but when Chatterbox laughs there are only screams";
 				skindescription = "It has been hand-painted and distressed. The skull painted over the dust cover appears to chatter when the bolt reciprocates.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AWP | Man-o'-war";
 				flavortext = "Turn some heads before you take them off";
@@ -382,7 +388,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -483,7 +489,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "MAC-10 | Neon Rider";
 				flavortext = "One part firearm, two parts Trapper Keeper";
 				skindescription = "It has been custom painted with the image of a deadly biker.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A1-S | Hyper Beast";
 				flavortext = "You really want to impress me Booth? Make this black light sensitive - Rona Sabri, Rising Star";
@@ -493,7 +499,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -604,7 +610,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "PP-Bizon | Judgement of Anubis";
 				flavortext = "Its trigger weighs lighter than a feather";
 				skindescription = "It has been custom painted in an Egyptian theme";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A1-S | Chantico's Fire";
 				flavortext = "Protect what is yours";
@@ -614,7 +620,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -684,7 +690,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -764,7 +770,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -863,16 +869,16 @@ public class CsgoCases extends ItemColorTracker {
 			if (percent >= 0 && percent <= 50.5) {
 				itemname = "M4A4 | Bullet Rain";
 				skindescription = "It has been custom-painted with a graphic of clouds raining bullets.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AK-47 | Jaguar";
 				skindescription = "It has been custom painted with the image of a panther over a tiger camo background.";
-				this.pink++;
+				this.red++;
 			}
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -977,7 +983,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "AK-47 | Aquamarine Revenge";
 				flavortext = "Is there an echo in here?";
 				skindescription = "It has been custom painted with the image of a pod of dolphins.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AWP | Hyper Beast";
 				flavortext = "You really want to impress me Booth? Make this black light sensitive - Rona Sabri, Rising Star";
@@ -999,7 +1005,7 @@ public class CsgoCases extends ItemColorTracker {
 		flavortext = "N/A";
 	}
 
-	public void GammaCase() { // GAMMA CASE
+	public void GammaCase() { // GAMMA (1) CASE
 		// #s: blue = 7, purple = 5, pink = 3, red = 2, gold = 1
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
@@ -1098,7 +1104,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "Glock-18 | Wasteland Rebel";
 				flavortext = "Pay tribute";
 				skindescription = "It has been distressed, block printed, and painted with graffiti.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A1-S | Mecha Industries";
 				flavortext = "Featuring all new technology";
@@ -1108,7 +1114,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -1219,7 +1225,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "FAMAS | Roll Cage";
 				flavortext = "Safety first";
 				skindescription = "It has been given custom decals that resemble a mud-splattered car chassis.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AK-47 | Neon Revolution";
 				flavortext = "No suicide squad would be complete without it";
@@ -1229,7 +1235,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -1340,7 +1346,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "SSG 08 | Dragonfire";
 				flavortext = "Sit on your horde and wait for any who come to take it";
 				skindescription = "It has been given a hydrographic of a monstrous dragon snorting fire.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A4 | Buzz Kill";
 				flavortext = "There's one at every party";
@@ -1442,7 +1448,7 @@ public class CsgoCases extends ItemColorTracker {
 			if (percent >= 0 && percent <= 50.5) {
 				itemname = "AK-47 | Vulcan";
 				skindescription = "It has been custom painted in a sports inspired design.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "M4A4 | Desert-Strike";
 				skindescription = "It has been custom painted with a high-tech design in tan and black.";
@@ -1552,7 +1558,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "Desert Eagle | Golden Koi";
 				flavortext = "A loud gun in every sense of the word";
 				skindescription = "This memento from Chinatown has been covered in a metallic foil with a scale pattern.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AK-47 | Fire Serpent";
 				flavortext = "If you want to survive in the streets, learn to spit fire";
@@ -1562,7 +1568,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -1582,23 +1588,23 @@ public class CsgoCases extends ItemColorTracker {
 			if (percent >= 0 && percent <= 20.2) {
 				itemname = "Negev | Desert-Strike";
 				skindescription = "It has been custom painted with a high-tech design in tan and black.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "UMP-45 | Labyrinth";
 				skindescription = "It has been painted with subtle orange linework.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "MP7 | Urban Hazard";
 				skindescription = "It has been custom painted with urban camo and orange accents.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "P2000 | Ivory";
 				skindescription = "It has faux ivory parts.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "SSG 08 | Abyss";
 				skindescription = "It has been painted with a hydrographic in an oceanic pattern.";
-				this.purple++;
+				this.blue++;
 			}
 			totalblue++;
 			rarity = "Blue";
@@ -1646,7 +1652,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "M4A1-S | Cyrex";
 				flavortext = "Sebastien is coming for me Valeria... we don't have much time - Chase Turner, Coalition Defector";
 				skindescription = "It has been custom painted with a high-tech design in black, white, and red.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "P90 | Asiimov";
 				flavortext = "Anyone can predict the future... a visionary shapes it";
@@ -1767,7 +1773,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "Five-SeveN | Hyper Beast";
 				flavortext = "We're all monsters";
 				skindescription = "It has been custom painted with a beastly creature in psychedelic colors.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AWP | Oni Taiji";
 				flavortext = "Face your demons";
@@ -1798,22 +1804,22 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "Tec-9 | Sandstorm";
 				flavortext = "It'll take more than a tarp to protect you";
 				skindescription = "It has been painted using a hydrographic in a purple and beige graphic design.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 25.25 && percent <= 50.50) {
 				itemname = "UMP-45 | Corporal";
 				flavortext = "Respect can never be taken, only earned";
 				skindescription = "It has been custom painted in a military motif.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 50.50 && percent <= 75.75) {
 				itemname = "Negev | Terrain";
 				flavortext = "For someone who is supposed to be impartial, your daughter made an interesting choice for companionship - The Father and The Phoenix Part 1";
 				skindescription = "It has been painted using a hydrographic with a terrain motif.";
-				this.purple++;
+				this.blue++;
 			} else if (percent > 75.75 && percent <= 101) {
 				itemname = "MAG-7 | Heaven Guard";
 				flavortext = "Sometimes the wings of an angel don't mean salvation";
 				skindescription = "It has been painted using a combination of subtly patterned hydrographics and dry-transfer decals of wings.";
-				this.purple++;
+				this.blue++;
 			}
 			totalblue++;
 			rarity = "Blue";
@@ -1868,7 +1874,7 @@ public class CsgoCases extends ItemColorTracker {
 				itemname = "AUG | Chameleon";
 				flavortext = "Subtlety can make all the difference";
 				skindescription = "It has been custom painted with the image of a chameleon.";
-				this.pink++;
+				this.red++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "AWP | Asiimov";
 				flavortext = "Anyone can predict the future... a visionary shapes it";
@@ -1878,7 +1884,7 @@ public class CsgoCases extends ItemColorTracker {
 			totalred++;
 			rarity = "Red";
 		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
-			placeholder = KnifeSkinGenerator.KnifeType();
+			placeholder = KnifeSkinGenerator.TheElevenCases();
 			itemname = placeholder.get(0);
 			flavortext = placeholder.get(1);
 			skindescription = placeholder.get(2);
@@ -1889,4 +1895,691 @@ public class CsgoCases extends ItemColorTracker {
 		new ItemStatistics(itemname, rarity, flavortext, skindescription);
 		flavortext = "N/A";
 	}
+
+	public void OperationVanguardCase() { // OPERATION VANGUARD WEAPON CASE
+		// #s: blue = 5, purple = 4, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "G3SG1 | Murky";
+				flavortext = "There is always some place darker you can go";
+				skindescription = "It has been anodized then painted using a leopard-spot hydrographic.";
+				this.blue++;
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "Five-SeveN | Urban Hazard";
+				flavortext = "Every year, Booth gathers the worlds foremost designer gunsmiths to show off their latest designs";
+				skindescription = "It has been custom painted with urban camo and red accents.";
+				this.blue++;
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "UMP-45 | Delusion";
+				flavortext = "Carcosa is calling";
+				skindescription = "It has been screen printed with a nautilus design.";
+				this.blue++;
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "MP9 | Dart";
+				flavortext = "Throw enough downfield and you're bound to hit the bullseye eventually";
+				skindescription = "It has been painted using a striped hydrographic arranged in a chevron pattern.";
+				this.blue++;
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "MAG-7 | Firestarter";
+				flavortext = "It always begins with a tiny spark";
+				skindescription = "It has been spray-painted in layers then distressed to give the appearance of burning edges.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "Sawed-Off | Highwayman";
+				flavortext = "You don't have to hold your pinky out when pulling the trigger, but it's a nice touch";
+				skindescription = "It has been lacquered in black and gold using a scotch thistle motif.";
+				this.purple++;
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "Glock-18 | Grinder";
+				flavortext = "The only way to make diamonds is by applying pressure";
+				skindescription = "The steel slide has been painted using a combination of stenciling and hand-painting using oil paints.";
+				this.purple++;
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "M4A1-S | Basilisk";
+				flavortext = "It's rude to stare, but war isn't the time for pleasantries";
+				skindescription = "It has been etched with a basilisk.";
+				this.purple++;
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "M4A4 | Griffin";
+				flavortext = "Felix handpicked his team from operators all over the world... and while people question their personalities, they never question the results";
+				skindescription = "It has been hand-painted with an illustration of a griffin.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "P250 | Cartel";
+				flavortext = "One little squeeze turns every morning into the Day of the Dead";
+				skindescription = "It has been engraved with skeletons, flowers and serpents.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "SCAR-20 | Cardiac";
+				flavortext = "beep. beep. beeeeeeeeeeeep...";
+				skindescription = "It has been heat wrapped with vinyl pre-printed in a modern orange and blue design.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "XM1014 | Tranquility";
+				flavortext = "I'm not here for what I need; I'm here for something I want - Imogen and The Oni Part 2";
+				skindescription = "It has been hand painted with the image of a woman with long hair.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "P2000 | Fire Elemental";
+				flavortext = "Sometimes playing with fire is a good thing";
+				skindescription = "It has been custom painted with the image of a creature made of fire in a graphic style.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Wasteland Rebel";
+				flavortext = "One day they will ask why we fight, and when they do they will understand - Naomi, Bodyguard to Valeria Jenner";
+				skindescription = "It has been distressed, block printed, and painted with graffiti.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.TheElevenCases();
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
+	public void OperationWildfireCase() { // OPERATION WILDFIRE CASE
+		// #s: blue = 6, purple = 5, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "Tec-9 | Jambiya";
+				flavortext = "Shahrazad told 1000 tales... this is the last one you'll hear";
+				skindescription = "It has been hand painted and laser-etched with middle eastern patterns.";
+				this.blue++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "MAC-10 | Lapis Gator";
+				flavortext = "Airboat not included";
+				skindescription = "It has been given a hydrographic of vibrant alligator skin.";
+				this.blue++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "Dual Berettas | Cartel";
+				flavortext = "That's why Huxley is doing the heavy lifting, all we have to is nudge her forward... - The Serpent and The Truth Seeker, Part 2";
+				skindescription = "It has been engraved with skeletons, flowers and serpents.";
+				this.blue++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "PP-Bizon | Photic Zone";
+				flavortext = "That's not crashing waves you hear...";
+				skindescription = "It has been given a custom camouflage pattern accented with florescent paint.";
+				this.blue++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "SSG 08 | Necropos";
+				flavortext = "Every carpenter needs their hammer, every tailor their spindle...";
+				skindescription = "It has been hand painted with nefarious runes.";
+				this.blue++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "USP-S | Lead Conduit";
+				flavortext = "You got what you wanted, now do you know what that means? – Booth, Arms Dealer";
+				skindescription = "It has been given a custom engraved silencer and slide.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "Tec-9 | Jambiya";
+				flavortext = "Shahrazad told 1000 tales... this is the last one you'll hear";
+				skindescription = "It has been hand painted and laser-etched with middle eastern patterns.";
+				this.purple++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "MAC-10 | Lapis Gator";
+				flavortext = "Airboat not included";
+				skindescription = "It has been given a hydrographic of vibrant alligator skin.";
+				this.purple++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "Dual Berettas | Cartel";
+				flavortext = "That's why Huxley is doing the heavy lifting, all we have to is nudge her forward... - The Serpent and The Truth Seeker, Part 2";
+				skindescription = "It has been engraved with skeletons, flowers and serpents.";
+				this.purple++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "PP-Bizon | Photic Zone";
+				flavortext = "That's not crashing waves you hear...";
+				skindescription = "It has been given a custom camouflage pattern accented with florescent paint.";
+				this.purple++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "SSG 08 | Necropos";
+				flavortext = "Every carpenter needs their hammer, every tailor their spindle...";
+				skindescription = "It has been hand painted with nefarious runes.";
+				this.purple++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "USP-S | Lead Conduit";
+				flavortext = "You got what you wanted, now do you know what that means? – Booth, Arms Dealer";
+				skindescription = "It has been given a custom engraved silencer and slide.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "Nova | Hyper Beast";
+				flavortext = "They call you The Oni, right? Such a scary name for such a sad man... – Elliot Kingsman, Mercenary";
+				skindescription = "It has been custom painted with a beastly creature in psychedelic colors.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "AWP | Elite Build";
+				flavortext = "Chase Turner was a great man... you have big shoes to fill – The Phoenix and The Initiate, Part 1";
+				skindescription = "It has been custom painted using a combination of hydrographics and careful stenciling and detailed with heat-transfer decals.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "Desert Eagle | Kumicho Dragon";
+				flavortext = "I'm a big fan of your work Yukako, we should talk... -Huxley, The Competition";
+				skindescription = "Dragons have been laser-etched onto the slide and grip.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "M4A4 | The Battlestar";
+				flavortext = "Beware those who speak of the watchtower";
+				skindescription = "All corners have been cut off the receipt of purchase.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Fuel Injector";
+				flavortext = "Live your life a quarter mag at a time";
+				skindescription = "The body of the rifle has been painted bright yellow and the magazine has been custom painted to look like machinery.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.KnifeSkin("Bowie Knife ", "This full-tang sawback Bowie knife is designed for heavy use in brutal survival situations.");
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
+	public void RevolverCase() { // REVOLVER CASE
+		// #s: blue = 6, purple = 6, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "SCAR-20 | Outbreak";
+				flavortext = "Valeria is getting bolder... the time has come to take the fight to her - Felix Riley, Commanding Officer";
+				skindescription = "It has been painted with vibrant shades of green.";
+				this.blue++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "Sawed-Off | Yorick";
+				flavortext = "Rosencrantz and Guildenstern never had a chance...";
+				skindescription = "It has been given a skull hydrographic and hand painted gold accents.";
+				this.blue++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "P2000 | Imperial";
+				flavortext = "That's why Huxley is doing the heavy lifting, all we have to is nudge her forward... - The Serpent and The Truth Seeker, Part 2";
+				skindescription = "It has been engraved with skeletons, flowers and serpents.";
+				this.blue++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "AUG | Ricochet";
+				flavortext = "My feelings are irrelevant Keo, I have an empire to protect - Booth, Arms Dealer";
+				skindescription = "It has been laser-etched and painted with red and yellow metallics.";
+				this.blue++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "Desert Eagle | Corinthian";
+				flavortext = "Protect. Hope. Trust. Persevere.";
+				skindescription = "It has been laser-etched and given a custom leather grip.";
+				this.blue++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "R8 Revolver | Crimson Web";
+				flavortext = "Be careful where you walk, you never know where the web is spread";
+				skindescription = "It has been painted using a spider web-patterned hydrographic over a red base coat and finished with a semi-gloss topcoat.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "XM1014 | Teclu Burner";
+				flavortext = "Sometimes a bunsen isn't enough...";
+				skindescription = "Metallic paint has been used to add flames.";
+				this.purple++;
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "Tec-9 | Avalanche";
+				flavortext = "We must be smart how we move against her, one wrong move and she'll come crashing down on both of us - The Serpent and the Truth Seeker";
+				skindescription = "It has been custom painted with a sleek and futuristic hydrographic.";
+				this.purple++;
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "PP-Bizon | Fuel Rod";
+				flavortext = "Sometimes grunts have the upper hand";
+				skindescription = "It has been custom painted to give the illusion of irradiated ammo.";
+				this.purple++;
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "Five-SeveN | Retrobution";
+				flavortext = "Some things never go out of style";
+				skindescription = "It was been custom painted with a retro hydrographic.";
+				this.purple++;
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "Negev | Power Loader";
+				flavortext = "Feared by Queens. Beloved by Bishops.";
+				skindescription = "It has been custom painted with a hydrographic reminiscent of heavy machinery.";
+				this.purple++;
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "SG 553 | Tiger Moth";
+				flavortext = "Valeria is getting bolder... the time has come to take the fight to her - Felix Riley, Commanding Officer";
+				skindescription = "It has been custom painted with a moth wing pattern.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "P90 | Shapewood";
+				flavortext = "Tweezers not included";
+				skindescription = "The wooden stock has been hand-carved, sanded, and laminated.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "G3SG1 | The Executioner";
+				flavortext = "I always take a trophy - Javier Alviso, Fist of the Phoenix";
+				skindescription = "It has been hand painted with a gruesome display of bone.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "AK-47 | Point Disarray";
+				flavortext = "Up close it is chaos... from a distance it is beauty - Franz Kriegeld, Phoenix Tactician";
+				skindescription = "It has been custom painted with a geometric hydrographic.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "R8 Revolver | Fade";
+				flavortext = "This isn't just a weapon, it's a conversation piece - Imogen, Arms Dealer In Training";
+				skindescription = "It has been painted by airbrushing transparent paints that fade together over a chrome base coat.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "M4A4 | Royal Paladin";
+				flavortext = "This phonecall never happened, do you understand? - The Paladin and the Father Part 1";
+				skindescription = "It has been painstakingly etched and painted to give a sense of grandeur.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.TheElevenCases();
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
+	public void ShadowCase() { // SHADOW CASE
+		// #s: blue = 7, purple = 4, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 14.43) {
+				itemname = "SCAR-20 | Green Marine";
+				flavortext = "Listen up people... Izaki and Cocinero may be AWOL, but our mission remains the same: we're saving Alex Kincaide - Felix Riley, Commanding Officer";
+				skindescription = "It has been given a camouflage pattern with metallic paint.";
+				this.blue++;
+			} else if (percent > 14.43 && percent <= 28.86) {
+				itemname = "XM1014 | Scumbria";
+				flavortext = "Let's not be hasty: there may be another way to get Valeria's attention... - A Father's Love Part 3";
+				skindescription = "It has been subtly painted with metallic paints.";
+				this.blue++;
+			} else if (percent > 28.86 && percent <= 43.29) {
+				itemname = "MAG-7 | Cobalt Core";
+				flavortext = "Keep him safe, Carmen - The Valkyrie and The Paramour Part 1";
+				skindescription = "It has been custom painted with a futuristic graphic design.";
+				this.blue++;
+			} else if (percent > 43.29 && percent <= 57.72) {
+				itemname = "MAC-10 | Rangeen";
+				flavortext = "Can you stand against it's wrathful gaze?";
+				skindescription = "It has been custom painted with an Ancient Egyptian motif.";
+				this.blue++;
+			} else if (percent > 57.72 && percent <= 72.15) {
+				itemname = "FAMAS | Survivor Z";
+				flavortext = "What's red and white and fires full auto?";
+				skindescription = "It has been stenciled using masking tape then distressed.";
+				this.blue++;
+			} else if (percent > 72.15 && percent <= 86.58) {
+				itemname = "Glock-18 | Wraiths";
+				flavortext = "First it pierces the shroud, then it pierces the shadow";
+				skindescription = "It has lost souls custom painted on the slide.";
+				this.blue++;
+			} else if (percent > 86.58 && percent <= 101) {
+				itemname = "Dual Berettas | Dualing Dragons";
+				flavortext = "Marian was always cooler than Sylvia";
+				skindescription = "It has dragons laser-etched on the slide and barrel.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "MP7 | Special Delivery";
+				flavortext = "If I do what you want, will you let me go? - The Phoenix and The Storyteller Part 2";
+				skindescription = "It has been -REDACTED-";
+				this.purple++;
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "M249 | Nebula Crusader";
+				flavortext = "You can use it, but you better put up a quarter first";
+				skindescription = "It has been custom painted to look like a classic arcade cabinet.";
+				this.purple++;
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "P250 | Wingshot";
+				flavortext = "Sometimes a subtle nudge is all it takes to get what you want - Franz Kriegeld, Phoenix Tactician";
+				skindescription = "It has been custom painted with a vibrant hydrographic.";
+				this.purple++;
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "Galil AR | Stone Cold";
+				flavortext = "Eventually you need to step outside of your mentor's shadow";
+				skindescription = "The stock and magazine bare its designer's mark.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "SSG 08 | Big Iron";
+				flavortext = "A win with an asterisk is still a win - Rona Sabri, Rising Star";
+				skindescription = "It has been custom painted with a yellow and orange hydrographic then slightly distressed.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "G3SG1 | Flux";
+				flavortext = "A plan is a list of things that don't happen";
+				skindescription = "It has been painted with purple and silver metallic paints.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "AK-47 | Frontside Misty";
+				flavortext = "I like to work in the snow... it always leaves a pretty picture - Javier Alviso, Fist of the Phoenix";
+				skindescription = "It has been painted in vibrant arctic colors.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "M4A1-S | Golden Coil";
+				flavortext = "The viper can strike from anywhere";
+				skindescription = "It has been painted with a hydrographic of an attacking snake.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "USP-S | Kill Confirmed";
+				flavortext = "2 in the chest, 1 in the head";
+				skindescription = "It has been custom painted with the image of a bullet shattering a skull.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.KnifeSkin("Shadow Daggers ", "Designed for efficient brutality, using a push dagger is as simple as throwing a punch or two.");
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
+	public void WinterOffensiveCase() { // WINTER OFFENSIVE WEAPON CASE
+		// #s: blue = 4, purple = 4, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "M249 | Magma";
+				flavortext = "A burning rate of fire";
+				skindescription = "Unmasked areas have subsequently been darkened via oxidization using liver of sulfur.";
+				this.blue++;
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "Galil AR | Sandstorm";
+				flavortext = "It'll take more than a tarp to protect you";
+				skindescription = "It has been painted using a hydrographic in a purple and beige graphic design.";
+				this.blue++;
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "Five-SeveN | Kami";
+				flavortext = "Some ghosts won't stay buried";
+				skindescription = "It has been painted using a hydrographic in a Japanese manga pattern.";
+				this.blue++;
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "PP-Bizon | Cobalt Halftone";
+				flavortext = "Felix, you and I both know Valeria's about to wage a war. The only question is are you prepared? - Booth, Arms Dealer";
+				skindescription = "It has been painted using a hydrographic in an oversized halftone pattern over a base coat of turquoise metallic paint.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "Nova | Rising Skull";
+				flavortext = "Mr. Izaki, I'm not complaining... but how many shotguns do you need? - Imogen and The Oni, Part 1";
+				skindescription = "It has been customized with an image of a skull using matte paints and an oil-based paint marker.";
+				this.purple++;
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "FAMAS | Pulse";
+				flavortext = "Striking colors for a striking weapon";
+				skindescription = "It has been painted with a hydrographic of bold fuchsia fragments.";
+				this.purple++;
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "Dual Berettas | Marina";
+				flavortext = "Some people will call you a hero... others a villain";
+				skindescription = "It has been painted with a hydrographic in a contrasting yellow and blue pattern.";
+				this.purple++;
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "MP9 | Rose Iron";
+				flavortext = "Beware its many thorns";
+				skindescription = "It has been hand painted with a rose and thorn motif in metallic paints of different colors.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "P250 | Mehndi";
+				flavortext = "Namaste";
+				skindescription = "It has been painted with a hydrographic in a paisley pattern.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "M4A1-S | Guardian";
+				flavortext = "I don't have to like you, I have to keep you safe - Carmen Cocinero, Extraction Expert";
+				skindescription = "It has been painted cobalt blue and stenciled with the CT logo on the magazine.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "AWP | Redline";
+				flavortext = "Never be afraid to push it to the limit";
+				skindescription = "It has been painted using a carbon fiber hydrographic and a dry-transfer decal of a red pinstripe.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "Sawed-Off | The Kraken";
+				flavortext = "It has been unleashed";
+				skindescription = "It has been hand painted with an image of an octopus.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "M4A4 | Asiimov";
+				flavortext = "Anyone can predict the future... a visionary shapes it";
+				skindescription = "It has been custom painted with a sci-fi design.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.TheElevenCases();
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
+	public void SpectrumCase() { // SPECTRUM (1) CASE
+		// #s: blue = 7, purple = 5, pink = 3, red = 2, gold = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 14.43) {
+				itemname = "PP-Bizon | Jungle Slipstream";
+				flavortext = "Follow the leader";
+				skindescription = "It has been custom painted with a green and yellow hydrographic.";
+				this.blue++;
+			} else if (percent > 14.43 && percent <= 28.86) {
+				itemname = "MP7 | Akoben";
+				flavortext = "Your personal battle cry";
+				skindescription = "It has been spray-painted with a blue pattern over a yellow base.";
+				this.blue++;
+			} else if (percent > 28.86 && percent <= 43.29) {
+				itemname = "Sawed-Off | Zander";
+				flavortext = "This one's a keeper";
+				skindescription = "It has been hand painted to resemble a popular game fish.";
+				this.blue++;
+			} else if (percent > 43.29 && percent <= 57.72) {
+				itemname = "SCAR-20 | Blueprint";
+				flavortext = "The best-laid plans are drawn to scale";
+				skindescription = "It has been hand painted using a blue theme to resemble an architect's blueprint.";
+				this.blue++;
+			} else if (percent > 57.72 && percent <= 72.15) {
+				itemname = "P250 | Ripple";
+				flavortext = "Be the pebble";
+				skindescription = " A blue-grey anodized pattern overlays a black base.";
+				this.blue++;
+			} else if (percent > 72.15 && percent <= 86.58) {
+				itemname = "Five-SeveN | Capillary";
+				flavortext = "20 over 100";
+				skindescription = "A custom paint job comprised of intricate teal and coral veins has been applied.";
+				this.blue++;
+			} else if (percent > 86.58 && percent <= 101) {
+				itemname = "Desert Eagle | Oxide Blaze";
+				flavortext = "Nothing a little sandpaper can't fix";
+				skindescription = "A custom paint job has been applied with a rust-colored base and white detailing.";
+				this.blue++;
+			}
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 79.92 && percent <= 95.2) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "MAC-10 | Last Dive";
+				flavortext = "There's beauty in chaos";
+				skindescription = "It has been hand painted with a randomized green and orange pattern.";
+				this.purple++;
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "Galil AR | Crimson Tsunami";
+				flavortext = "Westward breaks";
+				skindescription = "A spray-painted, blue wave pattern sits atop a maroon base.";
+				this.purple++;
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "XM1014 | Seasons";
+				flavortext = "Spring, summer, fall, and rarely winter";
+				skindescription = "It has been hand painted with a randomized multicolored leaf pattern.";
+				this.purple++;
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "M249 | Emerald Poison Dart";
+				flavortext = "Conservation is not a priority";
+				skindescription = "It has been painted using a hydrographic inspired by a poison dart frog.";
+				this.purple++;
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "UMP-45 | Scaffold";
+				flavortext = "Brick by brick";
+				skindescription = "It has been hand painted teal and given a convincing depth effect.";
+				this.purple++;
+			}
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 95.2 && percent <= 99.1) { // PINK TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "CZ75-Auto | Xiangliu";
+				flavortext = "Beware the rising tide";
+				skindescription = " A custom paint job with nine purple and gold snakes has been applied.";
+				this.pink++;
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "AWP | Fever Dream";
+				flavortext = "Delirium is a dangerous thing";
+				skindescription = "It has been custom painted with pink, blue, and purple drawings atop a black base.";
+				this.pink++;
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "M4A1-S | Decimator";
+				flavortext = "Quiet retrofuturism";
+				skindescription = "It has been custom painted with totally radical blue and pink highlights.";
+				this.pink++;
+			}
+			totalpink++;
+			rarity = "Pink";
+		} else if (percent > 99.1 && percent <= 99.7) { // RED TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "USP-S | Neo-Noir";
+				flavortext = "Drenched in a neon glow, she lies at the foot of an oppressive skyscraper";
+				skindescription = "It has been custom painted with a stylized blue-magenta woman over a grayscale background.";
+				this.red++;
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Bloodsport";
+				flavortext = "Co-driver wanted";
+				skindescription = "It has been covered in white logo decals over a red and black hydrographic.";
+				this.red++;
+			}
+			totalred++;
+			rarity = "Red";
+		} else if (percent > 99.7 && percent <= 101) { // GOLD TIER
+			placeholder = KnifeSkinGenerator.TheElevenCases();
+			itemname = placeholder.get(0);
+			flavortext = placeholder.get(1);
+			skindescription = placeholder.get(2);
+			this.gold++;
+			totalgold++;
+			rarity = "Gold";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription);
+		flavortext = "N/A";
+	}
+
 }
