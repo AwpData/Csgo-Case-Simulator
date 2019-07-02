@@ -2,6 +2,8 @@ import java.util.*;
 
 public class GloveSkinGenerator extends CsgoCases {
 	static private String itemname, flavortext = "N/A", skindescription;
+	
+	// Gloves -> Glove Case, Operation Hydra Case, Clutch Case
 
 	public static ArrayList<String> gloveSkin(String casename) { // casename to check for clutch case skins
 		ArrayList<String> GloveStats = new ArrayList<>();
