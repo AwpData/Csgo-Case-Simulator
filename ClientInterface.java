@@ -12,25 +12,7 @@ import java.io.*;
  */
 
 // CASES IMPLEMENTED (CsgoCases.java)
-// Csgo Weapons Cases (1-3)
-// Chroma Cases (1-3)
-// eSports 2013 Case
-// eSports 2013 Winter Case
-// eSports 2014 Summer Case
-// Falchion Case
-// Gamma Cases (1-2)
-// Glove Case
-// Huntsman Case
-// Operation Bravo Case
-// Operation Breakout Case
-// Operation Hydra Case
-// Operation Phoenix Case
-// Operation Vanguard Case
-// Operation Wildfire Case
-// Revolver Case
-// Shadow Case
-// Winter Offensive Case
-// Spectrum Case
+// All current cases have been implemented! (7/3/19)
 
 // CREDIT CASES IMPLEMENTED (CreditCases.java)
 // Small Credits Case 
@@ -120,9 +102,19 @@ public class ClientInterface {
 				proceed = HelperMethods.buyCheck("Winter Offensive Case", 200, "WinterOffensiveCase", "case");
 			} else if (selection.equals("24")) {
 				proceed = HelperMethods.buyCheck("Spectrum Case", 30, "SpectrumCase", "case");
+			} else if (selection.equals("25")) {
+				proceed = HelperMethods.buyCheck("Spectrum 2 Case ", 30, "Spectrum2Case", "case");
+			} else if (selection.equals("26")) {
+				proceed = HelperMethods.buyCheck("Clutch Case", 30, "ClutchCase", "case");
+			} else if (selection.equals("27")) {
+				proceed = HelperMethods.buyCheck("Horizon Case", 30, "HorizonCase", "case");
+			} else if (selection.equals("28")) {
+				proceed = HelperMethods.buyCheck("Danger Zone Case", 200, "DangerZoneCase", "case");
+			} else if (selection.equals("29")) {
+				proceed = HelperMethods.buyCheck("Prisma Case", 600, "PrismaCase", "case");
 			}
 			// ------------- Non Csgo Cases ------------- //
-			else if (selection.equals("25")) {
+			else if (selection.equals("30")) {
 				proceed = HelperMethods.buyCheck("Small Credits Case", 25, "SmallCreditsCase", "case");
 				if (proceed == true) {
 					credits += CreditsCases.getCreditsWin();
