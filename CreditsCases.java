@@ -50,6 +50,7 @@ public class CreditsCases extends ItemColorTracker {
 	public void getSessionWinnings() {
 		System.out.println("\nPress enter to see your winnings this session!\n");
 		HelperMethods.promptEnterKey();
+		System.out.println("You now have " + ClientInterface.credits + " + " + creditswin + " = " + (ClientInterface.credits + creditswin) + " credits.");
 		System.out.println("Winnings this session: " + creditswin + " credits");
 		System.out.println("10 credits box: " + getWhite());
 		System.out.println("20 credits box: " + getLightBlue());
