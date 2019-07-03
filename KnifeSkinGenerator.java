@@ -30,7 +30,7 @@ public class KnifeSkinGenerator extends CsgoCases {
 		return KnifeSkin(itemname, skindescription);
 	}
 
-	public static ArrayList<String> TheElevenCases() {
+	public static ArrayList<String> TheOriginalKnives() {
 		double percent = 100 * Math.random() + 1;
 		if (percent >= 0 && percent <= 20.2) {
 			itemname = "Bayonet ";
