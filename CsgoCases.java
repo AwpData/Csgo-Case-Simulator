@@ -3190,5 +3190,4 @@ public class CsgoCases extends ItemColorTracker {
 		new ItemStatistics(itemname, rarity, flavortext, skindescription);
 		flavortext = "N/A";
 	}
-
 }
