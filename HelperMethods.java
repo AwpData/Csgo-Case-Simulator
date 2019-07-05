@@ -15,7 +15,7 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 	// ---------- PRICE MULTIPLIERS -------------
 	// FN: *2.4, MW: *1.7, FT: *1.3, WW: *1.3, BS: *1.15
 
-	public static String MainMenu() {
+	public static String CsgoCasesMainMenu() {
 		System.out.println("Which case would you like to buy? (Enter number) \n");
 		System.out.println("1. CSGO Weapons Case");
 		System.out.println("2. CSGO Weapons Case 2");
@@ -45,26 +45,52 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("26. Clutch Case");
 		System.out.println("27. Horizon Case");
 		System.out.println("28. Danger Zone Case");
-		System.out.println("29. Prisma Case");
-		System.out.println("30. Small Credits Case");
+		System.out.println("29. Prisma Case\n");
+		System.out.println("\nType \"back\" to go to the main menu");
+		return input.next();
+	}
+
+	public static String MainMenu() {
+		System.out.println("What would you like to do?\n");
+		System.out.println("1. Buy Csgo Case(s)");
+		System.out.println("2. Buy Csgo Collections(s)");
+		System.out.println("3. Buy Credits Case(s)");
 		System.out.println("\nType \"inspect\" to get full information on a skin in your inventory (Float, Flavortext, Skin Description, etc...)");
 		System.out.println("Type \"sell\" to sell a skin");
 		System.out.println("Type \"quit\" to quit\n");
 		return input.next();
 	}
 
+	public static String CsgoCollectionsMenu() {
+		System.out.println("Which case would you like to buy? (Enter number) \n");
+		System.out.println("1. Alpha Case");
+		System.out.println("\nType \"back\" to go to the main menu");
+		return input.next();
+	}
+
+	public static String CreditsCasesMenu() {
+		System.out.println("Which case would you like to buy? (Enter number) \n");
+		System.out.println("1. Small Credits Case");
+		System.out.println("\nType \"back\" to go to the main menu");
+		return input.next();
+	}
+
 	public static boolean buyCheck(String boxname, int cost, String casename, String type) {
-		System.out.println(boxname + " cost " + cost + " credits. How many would you like to buy?");
-		numofboxes = input.nextInt();
-		int spendingtotal = numofboxes * cost;
 		if (credits == 0 || credits < 0) {
 			System.out.println("You are broke\nGame over...");
 			System.exit(0);
-		} else if (cost > credits) {
+		}
+		if (cost > credits) {
 			System.out.println("You can't afford this " + type + " choose something else.\n");
 			return false;
-		} else if (spendingtotal > credits) {
-			System.out.println("Insufficient funds you need " + (spendingtotal - credits) + " credits more.\n");
+		}
+		System.out.println(boxname + " cost " + cost + " credits.");
+		System.out.println("The maximum number of " + type + " you can buy: " + (credits / cost));
+		System.out.println("How many would you like to buy?\n");
+		numofboxes = input.nextInt();
+		int spendingtotal = numofboxes * cost;
+		if (spendingtotal > credits) {
+			System.out.println("Insufficient funds, you need " + (spendingtotal - credits) + " credits more. Try again.\n");
 			return false;
 		} else {
 			System.out.println("Buying " + numofboxes + " boxes...");
@@ -74,7 +100,6 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 			preSpin(numofboxes, casename, type);
 			return true;
 		}
-		return false;
 	}
 
 	public static void preSpin(int numofboxes, String casename, String boxtype) {
@@ -82,7 +107,11 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 			CreditsCases creditscase = new CreditsCases();
 			spin(creditscase, casename, numofboxes, boxtype);
 			creditscase.getSessionWinnings();
-		} else { // If (case type is Csgo skin case)
+		} else if (casename.contains("Collection")) {
+			CsgoCollections csgocollection = new CsgoCollections();
+			spin(csgocollection, casename, numofboxes, boxtype);
+			csgocollection.getSessionWinnings();
+		} else {
 			CsgoCases csgocase = new CsgoCases();
 			spin(csgocase, casename, numofboxes, boxtype);
 			csgocase.getSessionWinnings();
@@ -136,9 +165,13 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		promptEnterKey();
 	}
 
-	public static void addCreditsFromSell(String item) {
+	public static void addCreditsFromSell(String item) { // Dev note: Adjust prices for blues and purples for collections as they are worth more
 		int price = 0;
-		if (item.contains("[BLUE]")) {
+		if (item.contains("[WHITE]")) {
+			price += 10;
+		} else if (item.contains("[LIGHT BLUE]")) {
+			price += 15;
+		} else if (item.contains("[BLUE]")) {
 			if (item.contains("StatTrak")) {
 				price += 50;
 			} else {
