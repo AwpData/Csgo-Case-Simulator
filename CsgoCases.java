@@ -12,7 +12,7 @@ public class CsgoCases extends ItemColorTracker {
 	public void getSessionWinnings() {
 		System.out.println("\nPress enter to see your winnings this session!");
 		HelperMethods.promptEnterKey();
-		System.out.println("Winnings this session: "); // Set # of new skins and # of duplicate skins found (based in text file) later
+		System.out.println("Winnings this session: ");
 		System.out.println("Blue (Mil-Spec): " + getBlue());
 		System.out.println("Purple (Restricted): " + getPurple());
 		System.out.println("Pink (Classified): " + getPink());
