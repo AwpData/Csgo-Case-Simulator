@@ -6,17 +6,6 @@ public class ItemStatistics extends ClientInterface {
 	static public int stattrak;
 	static private ArrayList<ItemStatistics> itemlist = new ArrayList<>();
 
-	public ItemStatistics(String itemname, String rarity, String flavortext, String skindescription) {
-		this.rarity = rarity;
-		this.itemname = statTrak(itemname, this.rarity);
-		this.wear = wear(this.itemname);
-		this.itemfloat = itemfloat(this.wear);
-		this.flavortext = flavortext;
-		this.skindescription = skindescription;
-		itemlist.add(this);
-		System.out.print(this.toString());
-	}
-
 	// FLOAT GUIDE:
 	// FN float: 0.00 - 0.07
 	// MW float: 0.07 - 0.15
@@ -33,6 +22,29 @@ public class ItemStatistics extends ClientInterface {
 	// red = covert
 
 	// 10% chance of getting stattrak
+
+	public ItemStatistics(String itemname, String rarity, String flavortext, String skindescription) { // For Csgo Cases
+		this.rarity = rarity;
+		this.itemname = statTrak(itemname, this.rarity);
+		this.wear = wear(this.itemname);
+		this.itemfloat = itemfloat(this.wear);
+		this.flavortext = flavortext;
+		this.skindescription = skindescription;
+		itemlist.add(this);
+		System.out.print(this.toString());
+	}
+
+	public ItemStatistics(String itemname, String rarity, String flavortext, String skindescription, String nostatrak) { // For Csgo Collections
+		this.rarity = rarity;
+		this.itemname = itemname;
+		this.wear = wear(this.itemname);
+		this.itemfloat = itemfloat(this.wear);
+		this.flavortext = flavortext;
+		this.skindescription = skindescription;
+		itemlist.add(this);
+		System.out.print(this.toString());
+	}
+
 	private String statTrak(String itemname, String rarity) { // 1st step
 		if (itemname.contains("Glove") || itemname.contains("Wrap")) {
 			return itemname;
