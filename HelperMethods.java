@@ -81,15 +81,26 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 			System.exit(0);
 		}
 		if (cost > credits) {
-			System.out.println("You can't afford this " + type + " choose something else.\n");
+			System.out.println("You can't afford this " + type + " choose something else.");
 			return false;
 		}
+		System.out.println("\n" + boxname + " contains one of the following:\n");
+		try { // Prints Case Listings
+			Class<?> caselistings = Class.forName("BoxInformation");
+			Method method = caselistings.getDeclaredMethod(casename);
+			method.invoke(method);
+		} catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			System.out.println("Error: could not find case listings");
+		}
 		System.out.println(boxname + " cost " + cost + " credits.");
-		System.out.println("The maximum number of " + type + " you can buy: " + (credits / cost));
-		System.out.println("How many would you like to buy?\n");
+		System.out.println("The maximum number of " + type + "s you can buy: " + (credits / cost));
+		System.out.println("How many would you like to buy? (Typing 0 brings you back to the main menu)\n");
 		numofboxes = input.nextInt();
 		int spendingtotal = numofboxes * cost;
-		if (spendingtotal > credits) {
+		if (numofboxes == 0) {
+			System.out.println("Going back to main menu...");
+			return false;
+		} else if (spendingtotal > credits) {
 			System.out.println("Insufficient funds, you need " + (spendingtotal - credits) + " credits more. Try again.\n");
 			return false;
 		} else {
@@ -127,7 +138,7 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 				Method method = objectname.getClass().getMethod(casename);
 				method.invoke(objectname);
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				System.out.println("Non-existant Casename");
+				System.out.println("Error: non-existant case");
 			}
 			System.out.println();
 		}
@@ -232,7 +243,7 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		try {
 			System.in.read(new byte[2]);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Error: cannot prompt user with ENTER key");
 		}
 	}
 }
