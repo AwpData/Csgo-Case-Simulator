@@ -22,7 +22,7 @@ import java.io.*;
 // STICKER CAPSULES IMPLEMENTED (CsgoCapsules.java)
 
 //CREDIT CASES IMPLEMENTED (CreditCases.java)
-//Small Credits Case 
+// Small Credits Case 
 
 // CUSTOM CASES IMPLEMENTED (CustomCases.java)
 
@@ -146,6 +146,8 @@ public class ClientInterface {
 					credits += CreditsCases.getCreditsWin();
 					proceed = false;
 				}
+			} else {
+				System.out.println("\nInvalid option, try again.");
 			}
 
 			// ----------- Reset Static Stats For Next Spin ----------- //
