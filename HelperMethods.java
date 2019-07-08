@@ -180,8 +180,10 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		int price = 0;
 		if (item.contains("[WHITE]")) {
 			price += 10;
+			ItemColorTracker.totalwhitesold++;
 		} else if (item.contains("[LIGHT BLUE]")) {
 			price += 15;
+			ItemColorTracker.totallightbluesold++;
 		} else if (item.contains("[BLUE]")) {
 			if (item.contains("StatTrak")) {
 				price += 50;
