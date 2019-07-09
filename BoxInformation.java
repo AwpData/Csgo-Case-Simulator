@@ -559,22 +559,41 @@ public class BoxInformation extends HelperMethods {
 	// ----- CSGO COLLECTIONS ----- //
 
 	protected static void AlphaCollection() {
-		System.out.println("[WHITE] MP9 | Dry Season");
-		System.out.println("[WHITE] M249 | Jungle DDPAT");
-		System.out.println("[WHITE] XM1014 | Jungle");
-		System.out.println("[WHITE] Tec-9 | Tornado");
-		System.out.println("[WHITE] MP7 | Groundwater");
-		System.out.println("[WHITE] Five-SeveN | Anodized Gunmetal");
+		System.out.println("[WHITE]      MP9 | Dry Season");
+		System.out.println("[WHITE]      M249 | Jungle DDPAT");
+		System.out.println("[WHITE]      XM1014 | Jungle");
+		System.out.println("[WHITE]      Tec-9 | Tornado");
+		System.out.println("[WHITE]      MP7 | Groundwater");
+		System.out.println("[WHITE]      Five-SeveN | Anodized Gunmetal");
 		System.out.println("[LIGHT BLUE] SSG 08 | Mayan Dreams");
 		System.out.println("[LIGHT BLUE] Negev | Palm");
 		System.out.println("[LIGHT BLUE] Sawed-Off | Mosaico");
 		System.out.println("[LIGHT BLUE] P250 | Facets");
 		System.out.println("[LIGHT BLUE] Glock-18 | Sand Dune");
-		System.out.println("[BLUE] AUG | Anodized Navy");
-		System.out.println("[BLUE] MAG-7 | Hazard");
-		System.out.println("[BLUE] PP-Bizon | Rust Coat");
-		System.out.println("[PURPLE] FAMAS | Spitfire");
-		System.out.println("[PURPLE] SCAR-20 | Emerald\n");
+		System.out.println("[BLUE]       AUG | Anodized Navy");
+		System.out.println("[BLUE]       MAG-7 | Hazard");
+		System.out.println("[BLUE]       PP-Bizon | Rust Coat");
+		System.out.println("[PURPLE]     FAMAS | Spitfire");
+		System.out.println("[PURPLE]     SCAR-20 | Emerald\n");
+	}
+
+	protected static void AssaultCollection() {
+		System.out.println("[WHITE]      SG 553 | Tornado");
+		System.out.println("[WHITE]      UMP-45 | Caramel");
+		System.out.println("[LIGHT BLUE] Five-SeveN | Candy Apple");
+		System.out.println("[BLUE]       Negev | Anodized Navy");
+		System.out.println("[BLUE]       AUG | Hot Rod");
+		System.out.println("[PURPLE]     MP9 | Bulldozer");
+		System.out.println("[PURPLE]     Glock-18 | Fade\n");
+	}
+
+	protected static void AztecCollection() {
+		System.out.println("[WHITE]      Five-SeveN | Jungle");
+		System.out.println("[WHITE]      Nova | Forest Leaves");
+		System.out.println("[WHITE]      SSG 08 | Lichen Dashed");
+		System.out.println("[LIGHT BLUE] M4A4 | Jungle Tiger");
+		System.out.println("[LIGHT BLUE] AK-47 | Jungle Spray");
+		System.out.println("[BLUE]       Tec-9 | Ossified\n");
 	}
 
 	// ----- CREDIT CASES ----- //
@@ -588,4 +607,3 @@ public class BoxInformation extends HelperMethods {
 		System.out.println("100 Credits\n");
 	}
 }
-
