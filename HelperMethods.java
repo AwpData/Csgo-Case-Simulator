@@ -15,6 +15,17 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 	// ---------- PRICE MULTIPLIERS -------------
 	// FN: *2.4, MW: *1.7, FT: *1.3, WW: *1.3, BS: *1.15
 
+	public static String MainMenu() {
+		System.out.println("What would you like to do?\n");
+		System.out.println("1. Buy Csgo Case(s)");
+		System.out.println("2. Buy Csgo Collections(s)");
+		System.out.println("3. Buy Credits Case(s)");
+		System.out.println("\nType \"inspect\" to get full information on a skin in your inventory (Float, Flavortext, Skin Description, etc...)");
+		System.out.println("Type \"sell\" to sell a skin");
+		System.out.println("Type \"quit\" to quit\n");
+		return input.next();
+	}
+
 	public static String CsgoCasesMainMenu() {
 		System.out.println("Which case would you like to buy? (Enter number) \n");
 		System.out.println("1. CSGO Weapons Case");
@@ -50,20 +61,11 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		return input.next();
 	}
 
-	public static String MainMenu() {
-		System.out.println("What would you like to do?\n");
-		System.out.println("1. Buy Csgo Case(s)");
-		System.out.println("2. Buy Csgo Collections(s)");
-		System.out.println("3. Buy Credits Case(s)");
-		System.out.println("\nType \"inspect\" to get full information on a skin in your inventory (Float, Flavortext, Skin Description, etc...)");
-		System.out.println("Type \"sell\" to sell a skin");
-		System.out.println("Type \"quit\" to quit\n");
-		return input.next();
-	}
-
 	public static String CsgoCollectionsMenu() {
 		System.out.println("Which case would you like to buy? (Enter number) \n");
-		System.out.println("1. Alpha Case");
+		System.out.println("1. Alpha Collection");
+		System.out.println("2. Assault Collection");
+		System.out.println("3. Aztec Collection");
 		System.out.println("\nType \"back\" to go to the main menu");
 		return input.next();
 	}
