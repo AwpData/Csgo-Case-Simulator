@@ -16,6 +16,8 @@ import java.io.*;
 
 // COLLECTIONS IMPLEMENTED (CsgoCollections.java)
 // Alpha Collection
+// Assault Collection
+// Aztec Collection
 
 // SOUVENIRS IMPLEMENTED (CsgoSouvenirs.java)
 
@@ -129,6 +131,10 @@ public class ClientInterface {
 				selection = HelperMethods.CsgoCollectionsMenu();
 				if (selection.equals("1")) {
 					proceed = HelperMethods.buyCheck("Alpha Collection", 1500, "AlphaCollection", "package");
+				} else if (selection.equals("2")) {
+					proceed = HelperMethods.buyCheck("Assault Collection", 3000, "AssaultCollection", "package");
+				} else if (selection.equals("3")) {
+					proceed = HelperMethods.buyCheck("Aztec Collection", 500, "AztecCollection", "package");
 				} else if (selection.equalsIgnoreCase("back")) {
 					continue;
 				}
