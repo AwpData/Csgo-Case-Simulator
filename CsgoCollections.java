@@ -22,6 +22,8 @@ public class CsgoCollections extends CsgoCases {
 	// ALL COLLECTIONS BELOW HERE -------------------
 	// PRICE GUIDE: (Pre-determined)
 	// Alpha Collection: 1500;
+	// Assault Collection: 3000;
+	// Aztec Collection: 500;
 
 	public void AlphaCollection() { // ALPHA COLLECTION
 		// #s: white = 6, light-blue = 5, blue = 3, purple = 2;
@@ -32,33 +34,28 @@ public class CsgoCollections extends CsgoCases {
 				itemname = "XM1014 | Jungle";
 				flavortext = "For those with an appetite for destruction";
 				skindescription = "This memento from Ruins has individual parts spray-painted solid colors in a jungle color scheme.";
-				this.white++;
 			} else if (percent > 16.83 && percent <= 33.66) {
 				itemname = "MP9 | Dry Season";
 				flavortext = "Don't worry...business is about to pick up - Booth, Arms Dealer";
 				skindescription = "This memento from Gwalior has been spray-painted using ripped tape strips and perforated metal as stencils.";
-				this.white++;
 			} else if (percent > 33.66 && percent <= 50.49) {
 				itemname = "M249 | Jungle DDPAT";
 				flavortext = "Even if you can't see it, you'll definitely hear it";
 				skindescription = "This memento from Ruins has been painted using a Digital Disruptive Pattern (DDPAT) hydrographic.";
-				this.white++;
 			} else if (percent > 50.49 && percent <= 67.32) {
 				itemname = "MP7 | Groundwater";
 				flavortext = "Never take victory for granted";
 				skindescription = "This memento from Cache has individual parts spray-painted solid colors in an olive drab color scheme.";
-				this.white++;
 			} else if (percent > 67.32 && percent <= 84.15) {
 				itemname = "Five-SeveN | Anodized Gunmetal";
 				flavortext = "You don't know Felix Riley like I do... the man is impossible to break - The Traitor and The Truthseeker Part 1";
 				skindescription = "This memento from Siege has been painted with a gunmetal anodized effect paint over a chrome base coat.";
-				this.white++;
 			} else if (percent > 84.15 && percent <= 101) {
 				itemname = "Tec-9 | Tornado";
 				flavortext = "Words are wind, but wind can kill";
 				skindescription = "This memento from Ali has individual parts spray-painted solid colors in a tornado color scheme.";
-				this.white++;
 			}
+			this.white++;
 			totalwhite++;
 			rarity = "White";
 		} else if (percent > 79.92 && percent <= 94.2) { // LIGHT BLUE TIER
@@ -67,28 +64,24 @@ public class CsgoCollections extends CsgoCases {
 				itemname = "Sawed-Off | Mosaico";
 				flavortext = "Patience is a virtue";
 				skindescription = "This memento from Ali has been painted with a mosaic hydrographic.";
-				this.lightblue++;
 			} else if (percent > 20.2 && percent <= 40.4) {
 				itemname = "Negev | Palm";
 				flavortext = "Beautiful today...ashes tomorrow";
 				skindescription = "This memento from Gwalior been spray-painted using cardboard cutouts, fine mesh, and palm leaves as stencils.";
-				this.lightblue++;
 			} else if (percent > 40.4 && percent <= 60.6) {
 				itemname = "SSG 08 | Mayan Dreams";
 				flavortext = "Sometimes a sacrifice is called for";
 				skindescription = "This memento from Ruins has been painted using a Mayan cloud motif hydrographic.";
-				this.lightblue++;
 			} else if (percent > 60.6 && percent <= 80.8) {
 				itemname = "P250 | Facets";
 				flavortext = "My men are professionals, they'll get the job done right... - Elliott Kingsman, Career Criminal";
 				skindescription = "This memento from Agency has been painted with a polygonal patterned hydrographic.";
-				this.lightblue++;
 			} else if (percent > 80.8 && percent <= 101) {
 				itemname = "Glock-18 | Sand Dune";
 				flavortext = "Gonzo journalist Alex Kincaide disappeared after traveling to The Maghreb to cover Operation Vanguard";
 				skindescription = "This memento from Gwalior has individual parts spray-painted solid colors in a sand dune color scheme.";
-				this.lightblue++;
 			}
+			this.lightblue++;
 			totallightblue++;
 			rarity = "Light Blue";
 		} else if (percent > 94.2 && percent <= 99.5) { // BLUE TIER
@@ -97,18 +90,16 @@ public class CsgoCollections extends CsgoCases {
 				itemname = "PP-Bizon | Rust Coat";
 				flavortext = "Scars build character";
 				skindescription = "This memento from Siege is still perfectly operational although the exterior surfaces have rusted.";
-				this.blue++;
 			} else if (percent > 33.66 && percent <= 67.32) {
 				itemname = "AUG | Anodized Navy";
 				flavortext = "I already lost one man to Valeria's lies... I don't intend to lose anyone else - Felix Riley, Commanding Officer";
 				skindescription = "This memento from Ali has been painted with a chrome base coat and candied in transparent navy anodized effect paint.";
-				this.blue++;
 			} else if (percent > 67.32 && percent <= 101) {
 				itemname = "MAG-7 | Hazard";
 				flavortext = "DO NOT CROSS";
 				skindescription = "This memento from Siege has been spray-painted in a hazard stripe pattern.";
-				this.blue++;
 			}
+			this.blue++;
 			totalblue++;
 			rarity = "Blue";
 		} else if (percent > 99.5 && percent <= 101) { // PURPLE TIER
@@ -117,15 +108,110 @@ public class CsgoCollections extends CsgoCases {
 				itemname = "SCAR-20 | Emerald";
 				flavortext = "This is what the great Sebastien Hennequet has been reduced to? A nagging school marm? What happened to you... - The Teacher and The Iconoclast Part 2";
 				skindescription = "This memento from Chinatown has been painted with a chrome base coat and candied in transparent emerald anodized effect paint.";
-				this.purple++;
 			} else if (percent > 50.5 && percent <= 101) {
 				itemname = "FAMAS | Spitfire";
 				flavortext = "Jester's dead";
 				skindescription = "This memento from Cache has been painted with a shark's mouth in the style of aircraft nose art.";
-				this.purple++;
 			}
+			this.purple++;
 			totalpurple++;
 			rarity = "Purple";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
+		flavortext = "N/A";
+	}
+
+	public void AssaultCollection() { // ASSAULT COLLECTION
+		// #s: white = 2, light-blue = 1, blue = 2, purple = 2;
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // WHITE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "SG 553 | Tornado";
+				skindescription = "It has individual parts spray-painted solid colors in a tornado color scheme.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "UMP-45 | Caramel";
+				skindescription = "It has individual parts spray-painted solid colors in a caramel and black color scheme.";
+			}
+			this.white++;
+			totalwhite++;
+			rarity = "White";
+		} else if (percent > 79.92 && percent <= 94.2) { // LIGHT BLUE TIER
+			itemname = "Five-SeveN | Candy Apple";
+			flavortext = "Great on cars, better on weapons";
+			skindescription = "It has individual parts spray-painted solid colors in a red and black color scheme.";
+			this.lightblue++;
+			totallightblue++;
+			rarity = "Light Blue";
+		} else if (percent > 94.2 && percent <= 99.5) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "Negev | Anodized Navy";
+				skindescription = "It has been painted with a chrome base coat and candied in transparent navy blue anodized effect paint.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AUG | Hot Rod";
+				flavortext = "Automatic. Systematic. Hydromatic.";
+				skindescription = "It has been painted with a chrome base coat and candied in transparent red anodized effect paint.";
+			}
+			this.blue++;
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 99.5 && percent <= 101) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "MP9 | Bulldozer";
+				flavortext = "This bone crusher is a devastator";
+				skindescription = "It has individual parts spray-painted solid colors in a production line yellow color scheme.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "Glock-18 | Fade";
+				flavortext = "This isn't just a weapon, it's a conversation piece - Imogen, Arms Dealer In Training";
+				skindescription = "It has been painted by airbrushing transparent paints that fade together over a chrome base coat.";
+			}
+			this.purple++;
+			totalpurple++;
+			rarity = "Purple";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
+		flavortext = "N/A";
+	}
+
+	public void AztecCollection() { // AZTEC COLLECTION
+		// #s: white = 3, light-blue = 2, blue = 1;
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 51) { // WHITE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "Five-SeveN | Jungle";
+				skindescription = "It has individual parts spray-painted solid colors in a jungle color scheme.";
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "Nova | Forest Leaves";
+				skindescription = "It has been spray-painted using leaves as stencils.";
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "SSG 08 | Lichen Dashed";
+				skindescription = "It has been spray-painted using short pieces of tape as stencils.";
+			}
+			this.white++;
+			totalwhite++;
+			rarity = "White";
+		} else if (percent > 51 && percent <= 90) { // LIGHT BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "M4A4 | Jungle Tiger";
+				skindescription = "It has been painted using a jungle tiger hydrographic.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | Jungle Spray";
+				flavortext = "Perfect for the insurgent on the go";
+				skindescription = "It has been spray-painted freehand with short, thick lines in contrasting colors.";
+			}
+			this.lightblue++;
+			totallightblue++;
+			rarity = "Light Blue";
+		} else if (percent > 90 && percent <= 101) { // BLUE TIER
+			itemname = "Tec-9 | Ossified";
+			skindescription = "It has been painted using a transparent lime green abstract hydrographic over a metallic base coat.";
+			this.blue++;
+			totalblue++;
+			rarity = "Blue";
 		}
 		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
 		flavortext = "N/A";
