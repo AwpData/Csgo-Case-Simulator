@@ -6,7 +6,9 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 	static public Scanner input = new Scanner(System.in);
 	static private int numofboxes;
 
-	// ---------- PRICES WHEN SELLING -----------
+	// ---------- PRICES WHEN SELLING (No Wear Calculations) -----------
+	// White: 10 credits
+	// Light-Blue: 15 credits
 	// Blue: 25 credits; With Stattrak: 50 credits
 	// Purple: 100 credits; With Stattrak: 200 credits
 	// Pink: 500 credits; With Stattrak: 1,000 credits
