@@ -595,6 +595,24 @@ public class BoxInformation extends HelperMethods {
 		System.out.println("[LIGHT BLUE] AK-47 | Jungle Spray");
 		System.out.println("[BLUE]       Tec-9 | Ossified\n");
 	}
+	
+	protected static void BaggageCollection() {
+		System.out.println("[WHITE]      MP7 | Olive Plaid");
+		System.out.println("[WHITE]      CZ75-Auto | Green Plaid");
+		System.out.println("[WHITE]      MP9 | Green Plaid");
+		System.out.println("[WHITE]      G3SG1 | Contractor");
+		System.out.println("[WHITE]      SSG 08 | Sand Dune");
+		System.out.println("[LIGHT BLUE] P2000 | Coach Class");
+		System.out.println("[LIGHT BLUE] P90 | Leather");
+		System.out.println("[LIGHT BLUE] MAC-10 | Commuter");
+		System.out.println("[LIGHT BLUE] SG 553 | Traveler");
+		System.out.println("[BLUE]       XM1014 | Red Leather");
+		System.out.println("[BLUE]       Sawed-Off | First Class");
+		System.out.println("[BLUE]       USP-S | Business Class");
+		System.out.println("[PURPLE]     AK-47 | First Class");
+		System.out.println("[PURPLE]     Desert Eagle | Pilot");
+		System.out.println("[PINK]       AK-47 | Jet Set\n");
+	}
 
 	// ----- CREDIT CASES ----- //
 
