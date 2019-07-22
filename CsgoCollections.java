@@ -24,6 +24,7 @@ public class CsgoCollections extends CsgoCases {
 	// Alpha Collection: 1500;
 	// Assault Collection: 3000;
 	// Aztec Collection: 500;
+	// Baggage Collection: 1500;
 
 	public void AlphaCollection() { // ALPHA COLLECTION
 		// #s: white = 6, light-blue = 5, blue = 3, purple = 2;
@@ -212,6 +213,101 @@ public class CsgoCollections extends CsgoCases {
 			this.blue++;
 			totalblue++;
 			rarity = "Blue";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
+		flavortext = "N/A";
+	}
+
+	public void BaggageCollection() { // BAGGAGE COLLECTION
+		// #s: white = 5, light blue = 4, blue = 3, purple = 2, pink = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // WHITE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "SSG 08 | Sand Dune";
+				flavortext = "With Turner dead, we have a new priority: rescue Alex Kincaide - Felix Riley, Commanding Officer";
+				skindescription = "It has individual parts spray-painted solid colors in a sand dune color scheme.";
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "G3SG1 | Contractor";
+				flavortext = "Rona Sabri still hasn't forgiven Sebastien for not selecting her to go after Turner";
+				skindescription = "It has individual parts spray-painted tan, navy and dark green.";
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "MP9 | Green Plaid";
+				flavortext = "It's not a bagpipe, but it plays a song before every funeral";
+				skindescription = "It has been painted with a hydrographic in a taupe and blue-green plaid pattern.";
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "C275-Auto | Green Plaid";
+				flavortext = "It's not a bagpipe, but it plays a song before every funeral";
+				skindescription = "It has been painted with a hydrographic in a taupe and blue-green plaid pattern.";
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "MP7 | Olive Plaid";
+				flavortext = "I like it. It brings out my eyes on camera... - Rona Sabri, Rising Star";
+				skindescription = "It has been painted with a hydrographic in a beige and olive green plaid pattern.";
+			}
+			this.white++;
+			totalwhite++;
+			rarity = "White";
+		} else if (percent > 79.92 && percent <= 95.2) { // LIGHT BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 25.25) {
+				itemname = "SG 553 | Traveler";
+				flavortext = "Everyone has a story, and Javier will pry it out before he kills you";
+				skindescription = "It has been custom painted in a stripe design inspired by vintage luggage, and had some parts wrapped in brown leather.";
+			} else if (percent > 25.25 && percent <= 50.50) {
+				itemname = "MAC-10 | Commuter";
+				flavortext = "They took the bait, let's move... - Elliott Kingsman, Mercenary";
+				skindescription = "It has been painted with a plaid hydrographic and partly wrapped in faux crocodile leather.";
+			} else if (percent > 50.50 && percent <= 75.75) {
+				itemname = "P90 | Leather";
+				flavortext = "Don't worry, the safety is TSA compliant";
+				skindescription = "Its stock has been wrapped in brown leather.";
+			} else if (percent > 75.75 && percent <= 101) {
+				itemname = "P2000 | Coach Class";
+				flavortext = "It's not fancy, but it gets you where you need to go";
+				skindescription = "It has been painted with a plaid hydrographic and parts of the grip have been wrapped in brown leather.";
+			}
+			this.lightblue++;
+			totallightblue++;
+			rarity = "Light Blue";
+		} else if (percent > 95.2 && percent <= 99.1) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "USP-S | Business Class";
+				flavortext = "Some people don't just want extra leg room... they want peace and quiet";
+				skindescription = "It has been custom painted with colors and patterns inspired by vintage luggage, and had some parts wrapped in brown leather.";
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "Sawed-Off | First Class";
+				flavortext = "Mimosa not included";
+				skindescription = "Its stock has been wrapped in green leather.";
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "XM1014 | Red Leather";
+				flavortext = "Pack your bags. Let's go kill that sonofabitch... - The Oni and The Valkyrie Part 2";
+				skindescription = "Its stock and grip have been wrapped in red leather.";
+			}
+			this.blue++;
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 99.1 && percent <= 99.7) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "Desert Eagle | Pilot";
+				flavortext = "Assume crash positions";
+				skindescription = "It has a brass inlay of a pilot's wings.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "AK-47 | First Class";
+				flavortext = "Mimosa not included";
+				skindescription = "Its stock has been wrapped in green leather.";
+			}
+			this.purple++;
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 99.7 && percent <= 101) { // PINK TIER
+			itemname = "AK-47 | Jet Set";
+			flavortext = "Anyone paying close attention will connect the dots and see what she did. We don't have much time to find a solution... - A Father's Love Part 1";
+			skindescription = "Its stock has been wrapped in brown leather. This weapon has been to a lot of cities.";
+			this.pink++;
+			totalpink++;
+			rarity = "Pink";
 		}
 		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
 		flavortext = "N/A";
