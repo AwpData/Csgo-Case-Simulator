@@ -116,7 +116,7 @@ public class ItemStatistics extends ClientInterface {
 			if (i == index) {
 				ItemStatistics item = itemlist.get(i - 1);
 				System.out.println("\nColor/Name: " + item.getRarity() + " " + item.getItemName());
-				System.out.println("Wear: " + item.getWear());
+				System.out.println("Wear: " + item.getWear().substring(1, (item.getWear().length() - 1)));
 				System.out.println("Float: " + item.getItemFloat());
 				System.out.println("Skin Description: " + item.getSkinDescription());
 				System.out.println("Flavortext: \"" + item.getFlavorText() + "\"\n");
