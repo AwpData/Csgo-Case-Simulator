@@ -69,6 +69,8 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		System.out.println("2. Assault Collection");
 		System.out.println("3. Aztec Collection");
 		System.out.println("4. Baggage Collection");
+		System.out.println("5. Bank Collection");
+		System.out.println("6. Cache Collection");
 		System.out.println("\nType \"back\" to go to the main menu");
 		return input.next();
 	}
