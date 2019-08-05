@@ -25,6 +25,8 @@ public class CsgoCollections extends CsgoCases {
 	// Assault Collection: 3000;
 	// Aztec Collection: 500;
 	// Baggage Collection: 1500;
+	// Bank Collection: 300;
+	// Cache Collection: 400;
 
 	public void AlphaCollection() { // ALPHA COLLECTION
 		// #s: white = 6, light-blue = 5, blue = 3, purple = 2;
@@ -308,6 +310,167 @@ public class CsgoCollections extends CsgoCases {
 			this.pink++;
 			totalpink++;
 			rarity = "Pink";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
+		flavortext = "N/A";
+	}
+
+	public void BankCollection() { // BANK COLLECTION
+		// #s: white = 6, light blue = 5, blue = 3, purple = 1, pink = 1
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 79.92) { // WHITE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "R8 Revolver | Bone Mask";
+				flavortext = "True power is demonstrated with subtle application";
+				skindescription = "It has been spray-painted using a tangle of masking tape as a stencil.";
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "Tec-9 | Urban DDPAT";
+				flavortext = "By the time you're close enough to notice the pixels it's already too late";
+				skindescription = "It has been painted using a Digital Disruptive Pattern (DDPAT) hydrographic.";
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "Sawed-Off | Forest DDPAT";
+				flavortext = "By the time you're close enough to notice the pixels it's already too late";
+				skindescription = "It has been painted using a Digital Disruptive Pattern (DDPAT) hydrographic.";
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "MP7 | Forest DDPAT";
+				flavortext = "By the time you're close enough to notice the pixels it's already too late";
+				skindescription = "It has been painted using a Digital Disruptive Pattern (DDPAT) hydrographic.";
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "SG 553 | Army Sheen";
+				flavortext = "Remember your training";
+				skindescription = "It has been covered in a metallic foil stamped with a camouflage pattern.";
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "Negev | Army Sheen";
+				flavortext = "Remember your training";
+				skindescription = "It has been covered in a metallic foil stamped with a camouflage pattern.";
+			}
+			this.white++;
+			totalwhite++;
+			rarity = "White";
+		} else if (percent > 79.92 && percent <= 95.2) { // LIGHT BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "MAC-10 | Silver";
+				flavortext = "There is beauty in simplicity - Franz Kriegeld, Phoenix Tactician";
+				skindescription = "It has been painted with a chrome base coat and candied in transparent silver anodized effect paint.";
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "UMP-45 | Carbon Fiber";
+				flavortext = "Just because I carried my team doesn't mean it wasn't a team effort - Rona Sabri, Rising Star";
+				skindescription = "It has been painted using a carbon fiber hydrographic over a graphite base coat.";
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "G3SG1 | Green Apple";
+				flavortext = "An apple a day keeps insurance premiums high";
+				skindescription = "It has individual parts spray-painted solid colors in a green and black color scheme.";
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "Nova | Caged Steel";
+				flavortext = "Say matte!";
+				skindescription = "It has been painted with a hex pattern using stencilled metal flake paint, then covered in an oval cutout hydrographic.";
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "Glock-18 | Death Rattle";
+				flavortext = "I know you don't believe in the cause...and when I expose you, Valeria will have your head - The Shield and The Serpent Part 1";
+				skindescription = "It has been painted with a snakeskin patterned hydrographic.";
+			}
+			this.lightblue++;
+			totallightblue++;
+			rarity = "Light Blue";
+		} else if (percent > 95.2 && percent <= 99.1) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 33.66) {
+				itemname = "Desert Eagle | Meteorite";
+				flavortext = "Everyone wants to make an impact";
+				skindescription = "It has been painted with metallic paint, using a crystallizing mask to create a pattern.";
+			} else if (percent > 33.66 && percent <= 67.32) {
+				itemname = "Galil AR | Tuxedo";
+				flavortext = "For when combat is a black tie affair";
+				skindescription = "It has individual parts spray-painted solid colors in a black and white color scheme.";
+			} else if (percent > 67.32 && percent <= 101) {
+				itemname = "CZ75-Auto | Tuxedo";
+				flavortext = "For when combat is a black tie affair";
+				skindescription = "It has individual parts spray-painted solid colors in a black and white color scheme.";
+			}
+			this.blue++;
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 99.1 && percent <= 99.7) { // PURPLE TIER
+			itemname = "AK-47 | Emerald Pinstripe";
+			flavortext = "Questioning Imogen is questioning me. Now Relax, have some scotch, and let's talk business - The Father and The Phoenix Part 2";
+			skindescription = "It has been given a bog oak stock and painted a white and green pinstripes.";
+			this.purple++;
+			totalpurple++;
+			rarity = "Purple";
+		} else if (percent > 99.7 && percent <= 101) { // PINK TIER
+			itemname = "P250 | Franklin";
+			flavortext = "Money doesn't talk... it kills";
+			skindescription = "It has been painted using a hydrographic of American hundred-dollar bills.";
+			this.pink++;
+			totalpink++;
+			rarity = "Pink";
+		}
+		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
+		flavortext = "N/A";
+	}
+
+	public void CacheCollection() { // CACHE COLLECTION
+		// #s: light-blue = 6, blue = 5, purple = 2;
+		double percent = 100 * Math.random() + 1;
+		if (percent >= 0 && percent <= 51) { // LIGHT BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 16.83) {
+				itemname = "Negev | Nuclear Waste";
+				skindescription = "It has been painted with a hydrographic pattern of nuclear hazards symbols.";
+			} else if (percent > 16.83 && percent <= 33.66) {
+				itemname = "PP-Bizon | Chemical Green";
+				skindescription = "It has been painted solid colors in grey and garish green.";
+			} else if (percent > 33.66 && percent <= 50.49) {
+				itemname = "Five-SeveN | Hot Shot";
+				skindescription = "It has been painted solid colors in light grey and hot green.";
+			} else if (percent > 50.49 && percent <= 67.32) {
+				itemname = "P250 | Contamination";
+				skindescription = "It has been painted with a hydrographic pattern of nuclear skulls and bones.";
+			} else if (percent > 67.32 && percent <= 84.15) {
+				itemname = "AUG | Radiation Hazard";
+				skindescription = "It has been spray-painted with radiological warning hazard patterns.";
+			} else if (percent > 84.15 && percent <= 101) {
+				itemname = "SG 553 | Fallout Warning";
+				skindescription = "It has been spray-painted with radiological warning hazard patterns.";
+			}
+			this.lightblue++;
+			totallightblue++;
+			rarity = "Light Blue";
+		} else if (percent > 51 && percent <= 95) { // BLUE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 20.2) {
+				itemname = "Tec-9 | Toxic";
+				skindescription = "It has been painted with a garish hydrographic pattern of nuclear skulls and bones.";
+			} else if (percent > 20.2 && percent <= 40.4) {
+				itemname = "MAC-10 | Nuclear Garden";
+				skindescription = "It has been chromed then overlayed with a semi transparent hydrographic pattern of nuclear skulls and bones.";
+			} else if (percent > 40.4 && percent <= 60.6) {
+				itemname = "XM1014 | Bone Machine";
+				skindescription = "It has been chromed then overlayed with a semi transparent hydrographic pattern of nuclear skulls and bones.";
+			} else if (percent > 60.6 && percent <= 80.8) {
+				itemname = "MP9 | Setting Sun";
+				skindescription = "It has been painted with a hydrographic pattern of nuclear hazards symbols.";
+			} else if (percent > 80.8 && percent <= 101) {
+				itemname = "Glock-18 | Reactor";
+				skindescription = "It has been painted with a pattern of nuclear hazard symbols using metallic paints.";
+			}
+			this.blue++;
+			totalblue++;
+			rarity = "Blue";
+		} else if (percent > 95 && percent <= 101) { // PURPLE TIER
+			percent = 100 * Math.random() + 1;
+			if (percent >= 0 && percent <= 50.5) {
+				itemname = "FAMAS | Styx";
+				skindescription = "It has been chromed then overlayed with a semi transparent hydrographic pattern of nuclear skulls and bones.";
+			} else if (percent > 50.5 && percent <= 101) {
+				itemname = "Galil AR | Cerberus";
+				skindescription = "It has been custom painted with a depiction of Cerberus, the mythical three headed dog that guards the underworld.";
+			}
+			this.purple++;
+			totalpurple++;
+			rarity = "Purple";
 		}
 		new ItemStatistics(itemname, rarity, flavortext, skindescription, "nostatrak");
 		flavortext = "N/A";
