@@ -19,6 +19,8 @@ import java.io.*;
 // Assault Collection
 // Aztec Collection
 // Baggage Collection
+// Bank Collection
+// Cache Collection
 
 // SOUVENIRS IMPLEMENTED (CsgoSouvenirs.java)
 
@@ -138,6 +140,10 @@ public class ClientInterface {
 					proceed = HelperMethods.buyCheck("Aztec Collection", 500, "AztecCollection", "package");
 				} else if (selection.equals("4")) {
 					proceed = HelperMethods.buyCheck("Baggage Collection", 1500, "BaggageCollection", "package");
+				} else if (selection.equals("5")) {
+					proceed = HelperMethods.buyCheck("Bank Collection", 300, "BankCollection", "package");
+				} else if (selection.equals("6")) {
+					proceed = HelperMethods.buyCheck("Cache Collection", 400, "CacheCollection", "package");
 				} else if (selection.equalsIgnoreCase("back")) {
 					continue;
 				}
