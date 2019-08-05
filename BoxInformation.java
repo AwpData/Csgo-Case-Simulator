@@ -595,7 +595,7 @@ public class BoxInformation extends HelperMethods {
 		System.out.println("[LIGHT BLUE] AK-47 | Jungle Spray");
 		System.out.println("[BLUE]       Tec-9 | Ossified\n");
 	}
-	
+
 	protected static void BaggageCollection() {
 		System.out.println("[WHITE]      MP7 | Olive Plaid");
 		System.out.println("[WHITE]      CZ75-Auto | Green Plaid");
@@ -612,6 +612,41 @@ public class BoxInformation extends HelperMethods {
 		System.out.println("[PURPLE]     AK-47 | First Class");
 		System.out.println("[PURPLE]     Desert Eagle | Pilot");
 		System.out.println("[PINK]       AK-47 | Jet Set\n");
+	}
+
+	protected static void BankCollection() {
+		System.out.println("[WHITE]      Negev | Army Sheen");
+		System.out.println("[WHITE]      SG 553 | Army Sheen");
+		System.out.println("[WHITE]      Sawed-Off | Forest DDPAT");
+		System.out.println("[WHITE]      MP7 | Forest DDPAT");
+		System.out.println("[WHITE]      Tec-9 | Urban DDPAT");
+		System.out.println("[WHITE]      R8 Revolver | Bone Mask");
+		System.out.println("[LIGHT BLUE] Glock-18 | Death Rattle");
+		System.out.println("[LIGHT BLUE] G3SG1 | Green Apple");
+		System.out.println("[LIGHT BLUE] Nova | Caged Steel");
+		System.out.println("[LIGHT BLUE] UMP-45 | Carbon Fiber");
+		System.out.println("[LIGHT BLUE] MAC-10 | Silver");
+		System.out.println("[BLUE]       CZ75-Auto | Tuxedo");
+		System.out.println("[BLUE]       Galil AR | Tuxedo");
+		System.out.println("[BLUE]       Desert Eagle | Meteorite");
+		System.out.println("[PURPLE]     AK-47 | Emerald Pinstripe");
+		System.out.println("[PINK]       P250 | Franklin\n");
+	}
+
+	protected static void CacheCollection() {
+		System.out.println("[LIGHT BLUE] Negev | Nuclear Waste");
+		System.out.println("[LIGHT BLUE] PP-Bizon | Chemical Green");
+		System.out.println("[LIGHT BLUE] Five-SeveN | Hot Shot");
+		System.out.println("[LIGHT BLUE] P250 | Contamination");
+		System.out.println("[LIGHT BLUE] AUG | Radiation Hazard");
+		System.out.println("[LIGHT BLUE] SG 553 | Fallout Warning");
+		System.out.println("[BLUE]       Tec-9 | Toxic");
+		System.out.println("[BLUE]       MAC-10 | Nuclear Garden");
+		System.out.println("[BLUE]       XM1014 | Bone Machine");
+		System.out.println("[BLUE]       MP9 | Setting Sun");
+		System.out.println("[BLUE]       Glock-18 | Reactor");
+		System.out.println("[PURPLE]     FAMAS | Styx");
+		System.out.println("[PURPLE]     Galil AR | Cerberus\n");
 	}
 
 	// ----- CREDIT CASES ----- //
