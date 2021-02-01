@@ -84,16 +84,22 @@ public class ItemStatistics extends ClientInterface {
 	}
 
 	private double itemfloat(String wear) { // 3rd step
-		if (wear.equals("(Factory-New)")) {
-			itemfloat = 0.07 * Math.random();
-		} else if (wear.equals("(Minimal-Wear)")) {
-			itemfloat = 0.08 * Math.random() + 0.07;
-		} else if (wear.equals("(Field-Tested)")) {
-			itemfloat = 0.22 * Math.random() + 0.15;
-		} else if (wear.equals("(Well-Worn)")) {
-			itemfloat = 0.07 * Math.random() + 0.37;
-		} else if (wear.equals("(Battle-Scarred)")) {
-			itemfloat = 0.56 * Math.random() + 0.44;
+		switch (wear) {
+			case "(Factory-New)":
+				itemfloat = 0.07 * Math.random();
+				break;
+			case "(Minimal-Wear)":
+				itemfloat = 0.08 * Math.random() + 0.07;
+				break;
+			case "(Field-Tested)":
+				itemfloat = 0.22 * Math.random() + 0.15;
+				break;
+			case "(Well-Worn)":
+				itemfloat = 0.07 * Math.random() + 0.37;
+				break;
+			case "(Battle-Scarred)":
+				itemfloat = 0.56 * Math.random() + 0.44;
+				break;
 		}
 		return itemfloat;
 	}
