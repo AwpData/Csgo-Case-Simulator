@@ -1,4 +1,5 @@
 import java.io.*;
+import java.sql.*;
 
 /* IMPORTANT IMPORTANT IMPORTANT
  *
@@ -35,12 +36,21 @@ public class ClientInterface {
     static int credits = 10000;
 
     public static void main(String[] args) throws FileNotFoundException {
+
+        Connection conn = null;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            conn = DriverManager.getConnection("jdbc:sqlite:CSGO.db");
+        } catch (Exception e) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+        }
         String selection = "";
         boolean proceed = false, mainloop = true;
         while (mainloop) {
 
             // ----------- Prints Out Inventory Of Items In File ----------- //
-            PrintStream output = new PrintStream(new File("src/inventory.txt"));
+            PrintStream output = new PrintStream(new File("./inventory.txt"));
             for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
                 output.println(ItemStatistics.getItemList().get(i).toString());
             }

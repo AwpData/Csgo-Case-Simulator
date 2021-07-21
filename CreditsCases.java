@@ -1,5 +1,5 @@
 public class CreditsCases extends ItemColorTracker {
-	protected static int creditswin, credit;
+	public static int creditswin, credit;
 
 	public CreditsCases() {
 		super();
@@ -62,7 +62,7 @@ public class CreditsCases extends ItemColorTracker {
 		HelperMethods.promptEnterKey();
 	}
 
-	protected static int getCreditsWin() {
+	public static int getCreditsWin() {
 		return creditswin;
 	}
 }
