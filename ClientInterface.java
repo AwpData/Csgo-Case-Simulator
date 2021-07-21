@@ -1,5 +1,6 @@
 import java.io.*;
 import java.sql.*;
+import java.util.Scanner;
 
 /* IMPORTANT IMPORTANT IMPORTANT
  *
@@ -32,25 +33,94 @@ import java.sql.*;
 
 // CUSTOM CASES IMPLEMENTED (CustomCases.java)
 
+
 public class ClientInterface {
     static int credits = 10000;
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, SQLException {
 
         Connection conn = null;
+        PreparedStatement ps = null;
+        Statement statement = null;
+        ResultSet rs;
+        String sql_command;
         try {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:CSGO.db");
+            statement = conn.createStatement();
+            sql_command = "CREATE TABLE IF NOT EXISTS simulations" +
+                    "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "name TEXT NOT NULL," +
+                    "password TEXT NOT NULL," +
+                    "credits INT DEFAULT(0)," +
+                    "golds INT DEFAULT(0)," + "reds INT DEFAULT(0)," + "pinks INT DEFAULT(0)," +
+                    "purples INT DEFAULT(0)," + "blues INT DEFAULT(0)," + "light_blues INT DEFAULT(0),"
+                    + "whites INT DEFAULT(0))";
+            statement.executeUpdate(sql_command);
+
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-        String selection = "";
+        Scanner login = new Scanner(System.in);
+        System.out.println("Welcome to AwpData's CSGO Simulation!");
+        boolean logged_in = false;
+        while (!logged_in) {
+            System.out.println("1. Create an Account");
+            System.out.println("2. Login to an Existing Account");
+            System.out.println("3. Delete an Existing Account");
+            String choice = login.nextLine();
+            if (choice.equals("1")) {
+                System.out.println("Username:");
+                String username = login.nextLine();
+                System.out.println("Password:");
+                String password = login.nextLine();
+                ps = conn.prepareStatement("INSERT INTO simulations (name, password) VALUES (?, ?)");
+                ps.setString(1, username);
+                ps.setString(2, password);
+                ps.executeUpdate();
+                System.out.println("\nAccount created!\n");
+            } else if (choice.equals("2")) {
+                System.out.println("Username:");
+                String username = login.nextLine();
+                System.out.println("Password:");
+                String password = login.nextLine();
+                if (select_user(username, password, ps, conn)) {
+                    System.out.println("\nSuccess! Account found!");
+                    logged_in = true;
+                }
+                if (!logged_in) {
+                    System.out.println("\nIncorrect username and/or password!\n");
+                }
+            } else if (choice.equals("3")) {
+                System.out.println("Username:");
+                String username = login.nextLine();
+                System.out.println("Password:");
+                String password = login.nextLine();
+                if (select_user(username, password, ps, conn)) {
+                    System.out.println("Are you sure you want to delete? (y/n)");
+                    String confirmation = login.nextLine();
+                    if (confirmation.equals("y")) {
+                        ps = conn.prepareStatement("DELETE FROM simulations WHERE name = ? AND password = ?");
+                        ps.setString(1, username);
+                        ps.setString(2, password);
+                        ps.executeUpdate();
+                        System.out.println("\nAccount deleted successfully!\n");
+                    }
+                } else {
+                    System.out.println("\nAccount not found!\n");
+                }
+            } else {
+                System.out.println("\nInvalid option. Please try again\n");
+            }
+        }
+
+        String selection;
         boolean proceed = false, mainloop = true;
         while (mainloop) {
 
             // ----------- Prints Out Inventory Of Items In File ----------- //
-            PrintStream output = new PrintStream(new File("./inventory.txt"));
+            PrintStream output = new PrintStream("./inventory.txt");
             for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
                 output.println(ItemStatistics.getItemList().get(i).toString());
             }
@@ -179,5 +249,25 @@ public class ClientInterface {
             CreditsCases.creditswin = 0;
             ItemStatistics.stattrak = 0;
         }
+        sql_command = "LOAD DATA INFILE 'inventory.txt' INTO TABLE CSGO.simulations";
+        statement.executeUpdate(sql_command);
+        statement.close();
+        conn.close();
+    }
+
+    public static boolean select_user(String username, String password, PreparedStatement ps, Connection conn) throws SQLException {
+
+        ps = conn.prepareStatement("SELECT name, password FROM simulations WHERE name = ? AND password = ?");
+        ps.setString(1, username);
+        ps.setString(2, password);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            if (rs.getString("name").equals(username) && rs.getString("password").equals(password)) {
+                System.out.println("\nSuccess! Account found!");
+                return true;
+            }
+        }
+        return false;
     }
 }
+
