@@ -3,6 +3,12 @@
 -Sell skins for credits <br>
 -Don't go bankrupt or the game is over! <br>
 
+<h1> Dev Path </h1>
+-Need to add inventory saving/reading <br>
+-Adding item colors / credits to db <br>
+-Updating collections and cases to present day <br>
+-Reformat code to fit database syntax <br>
+
 <h2> This program uses Unicode Characters! </h2> <br>
  * If you use Eclipse, it is set to use the default "Cp1252" text file encoding and this program must be set to "UTF-8"! <br>
  * In order to not get errors or missing characters (labeled with "?"): <br>
