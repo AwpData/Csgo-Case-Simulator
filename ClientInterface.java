@@ -38,12 +38,13 @@ public class ClientInterface {
     static int credits = 10000;
 
     public static void main(String[] args) throws FileNotFoundException, SQLException {
-
         Connection conn = null;
         PreparedStatement ps = null;
         Statement statement = null;
         ResultSet rs;
         String sql_command;
+        String username = null;
+        String password = null;
         try {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:CSGO.db");
@@ -55,7 +56,7 @@ public class ClientInterface {
                     "credits INT DEFAULT(0)," +
                     "golds INT DEFAULT(0)," + "reds INT DEFAULT(0)," + "pinks INT DEFAULT(0)," +
                     "purples INT DEFAULT(0)," + "blues INT DEFAULT(0)," + "light_blues INT DEFAULT(0),"
-                    + "whites INT DEFAULT(0))";
+                    + "whites INT DEFAULT(0)," + "inventory blob)";
             statement.executeUpdate(sql_command);
 
         } catch (Exception e) {
@@ -72,9 +73,9 @@ public class ClientInterface {
             String choice = login.nextLine();
             if (choice.equals("1")) {
                 System.out.println("Username:");
-                String username = login.nextLine();
+                username = login.nextLine();
                 System.out.println("Password:");
-                String password = login.nextLine();
+                password = login.nextLine();
                 ps = conn.prepareStatement("INSERT INTO simulations (name, password) VALUES (?, ?)");
                 ps.setString(1, username);
                 ps.setString(2, password);
@@ -82,11 +83,12 @@ public class ClientInterface {
                 System.out.println("\nAccount created!\n");
             } else if (choice.equals("2")) {
                 System.out.println("Username:");
-                String username = login.nextLine();
+                username = login.nextLine();
                 System.out.println("Password:");
-                String password = login.nextLine();
+                password = login.nextLine();
                 if (select_user(username, password, ps, conn)) {
                     System.out.println("\nSuccess! Account found!");
+                    //readData(conn, "inventory.txt", username, password);
                     logged_in = true;
                 }
                 if (!logged_in) {
@@ -94,9 +96,9 @@ public class ClientInterface {
                 }
             } else if (choice.equals("3")) {
                 System.out.println("Username:");
-                String username = login.nextLine();
+                username = login.nextLine();
                 System.out.println("Password:");
-                String password = login.nextLine();
+                password = login.nextLine();
                 if (select_user(username, password, ps, conn)) {
                     System.out.println("Are you sure you want to delete? (y/n)");
                     String confirmation = login.nextLine();
@@ -119,8 +121,8 @@ public class ClientInterface {
         boolean proceed = false, mainloop = true;
         while (mainloop) {
 
-            // ----------- Prints Out Inventory Of Items In File ----------- //
-            PrintStream output = new PrintStream("./inventory.txt");
+            // ----------- Prints Out Inventory Of Items In File ----------- /
+            PrintStream output = new PrintStream("inventory.txt");
             for (int i = 0; i < ItemStatistics.getItemList().size(); i++) {
                 output.println(ItemStatistics.getItemList().get(i).toString());
             }
@@ -131,6 +133,7 @@ public class ClientInterface {
             // ----------- Miscellaneous Options ----------- //
             if (selection.equalsIgnoreCase("quit")) { // Quit program
                 HelperMethods.quit();
+                mainloop = false;
             }
             if (selection.equalsIgnoreCase("sell")) {
                 HelperMethods.sell();
@@ -249,14 +252,84 @@ public class ClientInterface {
             CreditsCases.creditswin = 0;
             ItemStatistics.stattrak = 0;
         }
-        sql_command = "LOAD DATA INFILE 'inventory.txt' INTO TABLE CSGO.simulations";
-        statement.executeUpdate(sql_command);
+        ClientInterface.saveData(conn, username, password);
         statement.close();
         conn.close();
     }
 
-    public static boolean select_user(String username, String password, PreparedStatement ps, Connection conn) throws SQLException {
+    private static byte[] readFile() {
+        ByteArrayOutputStream bos = null;
+        try {
+            File f = new File("inventory.txt");
+            FileInputStream fis = new FileInputStream(f);
+            byte[] buffer = new byte[1024];
+            bos = new ByteArrayOutputStream();
+            for (int len; (len = fis.read(buffer)) != -1; ) {
+                bos.write(buffer, 0, len);
+            }
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+        return bos != null ? bos.toByteArray() : null;
+    }
 
+    public static void saveData(Connection conn, String username, String password) throws FileNotFoundException {
+        String updateSQL = "UPDATE simulations SET inventory = ? WHERE name = ? AND password = ?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(updateSQL);
+            ps.setBytes(1, readFile());
+            ps.setString(2, username);
+            ps.setString(3, password);
+            ps.executeUpdate();
+            System.out.println("Inventory has been saved to database...");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // THIS IS BUGGED (PRINTS NULNULNULNLUNLNUL into inventory.txt) find a way to not use binary but strings
+    public static void readData(Connection conn, String filename, String username, String password) {
+        String selectSQL = "SELECT inventory FROM simulations WHERE name = ? AND password = ?";
+        ResultSet rs = null;
+        FileOutputStream fos = null;
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(selectSQL);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+
+            File file = new File(filename);
+            fos = new FileOutputStream(file);
+
+            System.out.println("Writing your inventory to file inventory.txt...");
+            while (rs.next()) {
+                InputStream input = rs.getBinaryStream("inventory");
+                byte[] buffer = new byte[1024];
+                while (input.read(buffer) > 0) {
+                    fos.write(buffer);
+                }
+            }
+        } catch (SQLException | IOException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (SQLException | IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public static boolean select_user(String username, String password, PreparedStatement ps, Connection conn) throws SQLException {
         ps = conn.prepareStatement("SELECT name, password FROM simulations WHERE name = ? AND password = ?");
         ps.setString(1, username);
         ps.setString(2, password);

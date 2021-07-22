@@ -245,7 +245,6 @@ public class HelperMethods extends ClientInterface { // For Client Interface Cla
 		ItemColorTracker.getTotalWinnings();
 		System.out.println("\nCheck inventory.txt to see your winnings");
 		System.out.println("\nQuitting program...");
-		System.exit(0);
 	}
 
 	public static void promptEnterKey() { // ENTER key method

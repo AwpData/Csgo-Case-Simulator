@@ -31,7 +31,7 @@ public class ItemStatistics extends ClientInterface {
 		this.flavortext = flavortext;
 		this.skindescription = skindescription;
 		itemlist.add(this);
-		System.out.print(this.toString());
+		System.out.print(this);
 	}
 
 	public ItemStatistics(String itemname, String rarity, String flavortext, String skindescription, String nostatrak) { // For Csgo Collections
@@ -42,7 +42,7 @@ public class ItemStatistics extends ClientInterface {
 		this.flavortext = flavortext;
 		this.skindescription = skindescription;
 		itemlist.add(this);
-		System.out.print(this.toString());
+		System.out.print(this);
 	}
 
 	private String statTrak(String itemname, String rarity) { // 1st step
