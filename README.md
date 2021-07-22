@@ -2,6 +2,7 @@
 -Open cases and obtain skins <br>
 -Sell skins for credits <br>
 -Don't go bankrupt or the game is over! <br>
+-Data (will be) is saved using <a href="https://www.oracle.com/database/technologies/appdev/jdbc.html">JDBC</a> written in SQLite
 
 <h1> Dev Path </h1>
 -Need to add inventory saving/reading <br>
